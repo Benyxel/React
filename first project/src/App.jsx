@@ -1,8 +1,8 @@
 import { useState } from "react";
-
+import FComponent from './components/fcomponent';
 const App = () => {
 
- const [x,setx] = useState(0);
+ const [data,setx] = useState(0);
 
  const btnClick = () => {
   console.log("clicked");
@@ -13,6 +13,7 @@ const App = () => {
    <div>
       {x}
      <button onClick={()=>{btnClick()}}>Click me</button>
+     <fcomponent data={x} fn={setx}/>
     </div>
   )
 }
