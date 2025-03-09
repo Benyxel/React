@@ -1,12 +1,4 @@
+import {createRoot} from 'react-dom/client'
 
-
-const fcomponent = ({data,fn}) => {
-  return (
-    <div>
-        <button onClick={()=>{fn(10)}}>Set 10</button>
-      {data}
-    </div>
-  )
-}
-
-export default fcomponent
+const root = createRoot(document.querySelector("#root"))
+root.render(<h1>Hello</h1>)
