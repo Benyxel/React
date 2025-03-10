@@ -6,15 +6,26 @@
 
 .header{
   display: flex;
-  background-color: aqua;
+  background-color: rgb(32, 35, 35);
   align-items: center;
   justify-content: flex-start;
 }
 
+.header img{
+  margin-left: 50px;
+  width: 45px;
+}
 .nav-items{
+  font-family: roboto;
+  font-size: larger;
+  font-weight: 400;
   color: white;
-  background-color: black;
   padding: 10px;
   border-radius: 5px;
-  
+}
+
+.nav-items:hover{
+  background-color: rgb(124, 174, 124);
+  color: black;
+
 }
