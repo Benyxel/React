@@ -31,5 +31,8 @@ body{
 .nav-items:hover{
   background-color: rgb(124, 174, 124);
   color: black;
-
+}
+.nav-items a {
+  color: white;
+  text-decoration: none;
 }

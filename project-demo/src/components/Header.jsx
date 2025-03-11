@@ -5,9 +5,9 @@ function Header(){
     <header className="header">
     <img src="/src/assets/react.svg" />
     <ul className="nav-list">
-          <li className="nav-items" >Pricing</li>
-          <li className="nav-items">About</li>
-          <li className="nav-items">Contact</li>
+          <li className="nav-items" ><a href="">Home</a></li>
+          <li className="nav-items"> <a href="">About</a></li>
+          <li className="nav-items"><a href="">Contact</a></li>
     </ul>
     </header>
   </>
