@@ -2,6 +2,7 @@ import React from "react";
 import {createRoot} from "react-dom/client"
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
+import Contact from "./components/contact";
 import Footer from "./components/Footer";
 
 const root = createRoot(document.getElementById("root"))
@@ -15,7 +16,6 @@ function Page(){
   return (
     <>
     <Header/>
-    
     <MainContent/>
     <Footer/>
     </>
