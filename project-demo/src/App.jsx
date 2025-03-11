@@ -15,6 +15,7 @@ function Page(){
   return (
     <>
     <Header/>
+    
     <MainContent/>
     <Footer/>
     </>
