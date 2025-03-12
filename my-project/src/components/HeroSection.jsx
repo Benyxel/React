@@ -67,6 +67,13 @@ function HeroSection() {
                       </button>
                     </div>
                   </div>
+                  <dir>
+                    <img src={data.src} alt=""
+                      
+                      
+                      className='w-full h-full object-cover'
+                    />
+                  </dir>
                 </div>
               ))}
             </Slider>
