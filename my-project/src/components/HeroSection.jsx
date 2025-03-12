@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from "react-slick";
+import Button from './shared/Button';
 const HeroData =[
   { id: 1, src: '/src/assets/HeroS1.png', alt: 'Slide 1',
     subtile:"subtitle of the slide 1",
@@ -63,14 +64,21 @@ function HeroSection() {
                         <h1 className='text-2xl sm:text-6xl lg:text-2xl font-bold'>{data.subtile}</h1>
                         <h1 className=' text-5xl sm:text-6xl lg:text-7xl font-bold'>{data.title}</h1>
                         <h1 className='text-5xl uppercase text-[Green] dark:text-white/5 sm:text-[80px] md:text-[100px]xl:text-[150px] font-bold'>{data.description}</h1>
-                        <div> <button >Shop Now</button></div>
+                        <div>
+                          <Button
+                              text='Shop Now'
+                              bgColor='bg-primary'
+                              textColor='text-white'
+                          />
+                        </div>
+                        
                       </div>
                       <div className='order-1 sm:order-2' >
                       <div className='flex justify-center'>
                         <img
                           src={data.src}
                           alt={data.alt}
-                          className='w-[900px] h-[300px] sm:h-[450px] sm:scale-105 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)] relative z-40'
+                          className='w-[900px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)] relative z-40'
                         />
                       </div> 
                       </div>

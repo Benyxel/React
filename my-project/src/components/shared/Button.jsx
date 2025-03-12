@@ -1,11 +1,15 @@
 import React from 'react'
 
-const Button = () => {
+const Button = ({text, bgColor, handler = () =>{}}) => {
   return (
-    <div>
-      
-    </div>
+    <button
+    className={`${bgColor} cursor-pointer hover:scale-105 hover:text-white duration-300 px-8 py-2 rounded-full font-semibold relative z-10`}>
+        {text}
+    </button>
   )
 }
 
 export default Button
+
+
+
