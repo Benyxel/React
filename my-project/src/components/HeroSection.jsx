@@ -47,6 +47,7 @@ function HeroSection() {
         cssEase: "ease-in-out",
         pauseOnFocus: true,
         pauseOnHover: false,
+        autoplay: true,
 
       };
       return (
@@ -58,18 +59,20 @@ function HeroSection() {
                 {HeroData.map((data) => (
                   <div key={data.id}>
                     <div className='grid grid-cols-1 md:grid-cols-2'>
-                      <div className='flex flex-col justify-center gap-4 sm:pl-3 pt-12 sm:pt-0'>
-                        <h1>{data.subtile}</h1>
-                        <h1>{data.title}</h1>
-                        <p>{data.description}</p>
+                      <div className='flex flex-col justify-center gap-4 sm:pl-3 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10'>
+                        <h1 className='text-2xl sm:text-6xl lg:text-2xl font-bold'>{data.subtile}</h1>
+                        <h1 className=' text-5xl sm:text-6xl lg:text-7xl font-bold'>{data.title}</h1>
+                        <h1 className='text-5xl uppercase text-[Green] dark:text-white/5 sm:text-[80px] md:text-[100px]xl:text-[150px] font-bold'>{data.description}</h1>
                         <div> <button >Shop Now</button></div>
                       </div>
+                      <div className='order-1 sm:order-2' >
                       <div className='flex justify-center'>
                         <img
                           src={data.src}
                           alt={data.alt}
-                          className='w-[900px] h-[300px] sm:h-[450px] sm:scale-105 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)]'
+                          className='w-[900px] h-[300px] sm:h-[450px] sm:scale-105 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)] relative z-40'
                         />
+                      </div> 
                       </div>
                     </div>
                   </div>
