@@ -1,14 +1,14 @@
 import React from 'react'
 import Slider from "react-slick";
 const HeroData =[
-  { id: 1, src: '/src/assets/bm2.jpg', alt: 'Slide 1',
+  { id: 1, src: '/src/assets/HeroS1.png', alt: 'Slide 1',
     subtile:"subtitle of the slide 1",
     title:"title of the slide 1",
     description:"Description of the slide 1",
    },
 
 
-  { id: 2, src: '/src/assets/bm3.jpg', alt: 'Slide 2',
+  { id: 2, src: '/src/assets/heros2.jpg', alt: 'Slide 2',
     subtile:"subtitle of the slide 2",
     title:"title of the slide 2",
     description:"Description of the slide 2",
@@ -46,41 +46,39 @@ function HeroSection() {
         autoplaySpeed: 4000,
         cssEase: "ease-in-out",
         pauseOnFocus: true,
-        pauseOnHocus: false,
+        pauseOnHover: false,
 
       };
       return (
-        <div>
+        <div className='container'>
           {/* Hero Sec */}
-          <div className='w-full'>
-            <Slider {...settings}>
-              {HeroData.map((data) => (
-                <div key={data.id}>
-                  <div className='grid grid-cols-1 md:grid-cols-2'>
-                    <div>
-                      <h1>{data.subtile}</h1>
-                      <h1>{data.title}</h1>
-                      <p>{data.description}</p>
-
-                      <button >
-                        Shop Now
-                      </button>
+          <div className='overflow-hidden rounded-3xl min-h-[550px] sm:min-h-[650px] hero-bg-color flex justify-center items-center'>
+            <div className='container pb-8 sm:pb-0'>
+              <Slider {...settings}>
+                {HeroData.map((data) => (
+                  <div key={data.id}>
+                    <div className='grid grid-cols-1 md:grid-cols-2'>
+                      <div className='flex flex-col justify-center gap-4 sm:pl-3 pt-12 sm:pt-0'>
+                        <h1>{data.subtile}</h1>
+                        <h1>{data.title}</h1>
+                        <p>{data.description}</p>
+                        <div> <button >Shop Now</button></div>
+                      </div>
+                      <div className='flex justify-center'>
+                        <img
+                          src={data.src}
+                          alt={data.alt}
+                          className='w-[900px] h-[300px] sm:h-[450px] sm:scale-105 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)]'
+                        />
+                      </div>
                     </div>
                   </div>
-                  <dir>
-                    <img src={data.src} alt=""
-                      
-                      
-                      className='w-full h-full object-cover'
-                    />
-                  </dir>
-                </div>
-              ))}
-            </Slider>
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       );
     }
-    
 
 export default HeroSection
