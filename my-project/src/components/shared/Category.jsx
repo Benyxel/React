@@ -1,7 +1,21 @@
 import React from 'react'
 import Button from './Button'
 import image1 from '../../assets/bm4.png'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 const Category = () => {
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
   return (
     <div className='py-8'>
       <div className='container'>
@@ -20,6 +34,7 @@ const Category = () => {
                 />
               </div>
             </div>
+            
             <img src={image1}
             className='w-320px absolute bottom-0'
             />
