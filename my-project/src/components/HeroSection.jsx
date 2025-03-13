@@ -1,6 +1,8 @@
 import React from 'react'
 import Slider from "react-slick";
 import Button from './shared/Button';
+
+
 const HeroData =[
   { id: 1, src: '/src/assets/HeroS1.png', alt: 'Slide 1',
     subtile:"subtitle of the slide 1",
@@ -9,7 +11,7 @@ const HeroData =[
    },
 
 
-  { id: 2, src: '/src/assets/heros2.jpg', alt: 'Slide 2',
+  { id: 2, src: '/src/assets/heros2.png', alt: 'Slide 2',
     subtile:"subtitle of the slide 2",
     title:"title of the slide 2",
     description:"Description of the slide 2",
@@ -29,12 +31,7 @@ const HeroData =[
     title:"title of the slide 5",
     description:"Description of the slide 5",
    },
-  { id: 6, src: '/src/assets/bm7.jpg', alt: 'Slide 6', 
-    subtile:"subtitle of the slide 6",
-    title:"title of the slide 6",
-    description:"Description of the slide 6",
-  },
-  
+ 
 ]
 
 function HeroSection() {
@@ -48,7 +45,8 @@ function HeroSection() {
         cssEase: "ease-in-out",
         pauseOnFocus: true,
         pauseOnHover: false,
-        autoplay: true,
+        autoplay: false,
+        arrows: false,
 
       };
       return (
@@ -78,7 +76,7 @@ function HeroSection() {
                         <img
                           src={data.src}
                           alt={data.alt}
-                          className='w-[900px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)] relative z-40'
+                          className='w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)] relative z-40'
                         />
                       </div> 
                       </div>
