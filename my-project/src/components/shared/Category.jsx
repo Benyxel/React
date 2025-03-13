@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './Button'
-
-const Category = ({ imageSrc, title1, title2, title3 }) => {
+import image1 from '../../assets/bm4.png'
+const Category = () => {
   return (
     <div className='py-8'>
       <div className='container'>
@@ -20,7 +20,7 @@ const Category = ({ imageSrc, title1, title2, title3 }) => {
                 />
               </div>
             </div>
-            <img src="/src/assets/bmd.png" alt=""
+            <img src={image1}
             className='w-320px absolute bottom-0'
             />
           </div>

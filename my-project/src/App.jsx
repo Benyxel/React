@@ -10,8 +10,8 @@ import Category from './components/shared/Category'
     <div>
       <Navbar/>
       <HeroSection/>
-      < Category
-      
+      <Category
+       
       />
     </div>
   )
