@@ -24,9 +24,9 @@ const Category = () => {
           <div className='py-10 pl-5 bg-gradient-to-br from-black/90 to-black/70 text-white rounded-3xl relative h-[320px] flex items-end'> 
             <div>
               <div className='mb-4'>
-                <p>tile1</p>
-                <p>title2</p>
-                <p>title3</p>
+                <p className='mb-[10px] font-bold  text-gray-400'>Need help to order from</p>
+                <p className='text-2xl font-semibold mb-[2px]'>China</p>
+                <p className='text-4xl xl:text-5xl font-bold opacity-20'>Buy for me</p>
                 <Button 
                 text='Buy4me'
                 bgColor={"bg-primary"}
@@ -35,8 +35,8 @@ const Category = () => {
               </div>
             </div>
             
-            <img src={image1}
-            className='w-320px absolute bottom-0'
+            <img  src={image1}
+            className='w-320px absolute bottom-0 '
             />
           </div>
 
