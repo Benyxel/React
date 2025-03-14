@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TrackB = ({text, bgColor, handler = () =>{}}) => {
+const Buy4meB = ({text, bgColor, handler = () =>{}}) => {
   return (
     <button
     className={`${bgColor} cursor-pointer hover:scale-105 text-white hover:text-white duration-300 px-8 py-2 rounded-full font-semibold relative z-10 shadow-2xl`}>
@@ -9,6 +9,4 @@ const TrackB = ({text, bgColor, handler = () =>{}}) => {
   )
 }
 
-export default TrackB
-
-
+export default Buy4meB
