@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from "react-slick";
-import Button from './shared/TrackB';
+import Button from './shared/Button';
 
 
 const HeroData =[
@@ -24,7 +24,7 @@ const HeroData =[
   { id: 4, src: '/src/assets/store.png', alt: 'Slide 4' ,
     subtile:"Wholesale-Products",
     title:"Buy&Sell",
-    description:"Buy Goods at cheaper prices",
+    description:"Buy for Goods at cheaper prices",
   },
   
  

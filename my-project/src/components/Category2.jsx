@@ -12,41 +12,33 @@ const Category = () => {
   return (
     <div className='py-10'>
       <div className='container'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
 
-          <div className=' py-10 pl-5 bg-gradient-to-br from-black/90 to-black/70 text-white rounded-3xl relative h-[320px] flex items-end'> 
+          <div className='col-span-2 py-10 pl-5 bg-gradient-to-br  from-[#fd4343] to-[#f6123f] text-white rounded-3xl relative h-[320px] flex items-end'> 
             <div>
               {/* Buy for me card */}
               <div className='mb-4'>
                 <p className='mb-[0px] font-bold  text-gray-400'>Need help to order from</p>
                 <p className='text-2xl font-semibold mb-[30px]'>China?</p>
                 <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Buy for me Service</p>
-                <Buy4meB 
-                text='Buy4me'
-                bgColor={"bg-white"}
-                textColor={"text-white"} 
-                />
+                
               </div>
             </div>
           
             <img  src={image1}
-            className='w-320px absolute bottom-0   '
+            className='w-[450px] mx-[250px] absolute bottom-0   '
             />
           </div>
 
           {/* shipping card */}
-          <div className=' py-10 pl-5 bg-gradient-to-br from-[#210202] to-[#9e0e2b] text-white rounded-3xl relative h-[320px] flex items-end'> 
+          <div className=' py-10 pl-5 bg-gradient-to-br  from-black/90 to-black/70 text-white rounded-3xl relative h-[320px] flex items-end'> 
             <div>
               {/* Buy for me card */}
               <div className='mb-4'>
                 <p className='mb-[0px] font-bold  text-gray-400'>Shipping to ship from china to</p>
                 <p className='text-2xl font-semibold mb-[30px]'>Ghana</p>
-                <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Shipping to GH</p>
-                <TrackB 
-                text='Track your Order' 
-                bgColor={"bg-white"}
-                textColor={"text-white"}
-                />
+                <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Shipping</p>
+               
               </div>
             </div>
             <img  src={image2}
@@ -61,11 +53,7 @@ const Category = () => {
                 <p className='mb-[0px] font-bold  text-white'>Need help to order from</p>
                 <p className='text-2xl font-semibold mb-[30px]'>China?</p>
                 <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Sourcing</p>
-                <Buy4meB 
-                text='Buy4me'
-                bgColor={"bg-white"}
-                textColor={"text-primary"} 
-                />
+                
               </div>
             </div>
             <img  src={image1}
