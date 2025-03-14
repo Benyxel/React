@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import image1 from '../../assets/bm4.png'
+import image2 from '../../assets/sh1.png'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
@@ -15,6 +16,8 @@ const Category = () => {
     autoplay: true,
     autoplaySpeed: 2000,
   };
+
+  
 
   return (
     <div className='py-8'>
@@ -42,7 +45,7 @@ const Category = () => {
           </div>
 
           {/* sourcing card */}
-          <div className='py-10 pl-5 bg-gradient-to-br from-black/90 to-black/70 text-white rounded-3xl relative h-[320px] flex items-end'> 
+          <div className='py-10 pl-5 bg-gradient-to-br from-[green]/90 to-[red] text-white rounded-3xl relative h-[320px] flex items-end'> 
             <div>
               {/* Buy for me card */}
               <div className='mb-4'>
@@ -57,8 +60,8 @@ const Category = () => {
               </div>
             </div>
           
-            <img  src={image1}
-            className='w-320px absolute bottom-0 '
+            <img  src={image2}
+            className='w-320px absolute bottom-0'
             />
           </div>
         </div>
