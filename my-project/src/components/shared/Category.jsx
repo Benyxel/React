@@ -2,22 +2,9 @@ import React from 'react'
 import Button from './Button'
 import image1 from '../../assets/bm4.png'
 import image2 from '../../assets/sh1.png'
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+
 
 const Category = () => {
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  };
-
-  
 
   return (
     <div className='py-8'>
@@ -45,7 +32,7 @@ const Category = () => {
           </div>
 
           {/* sourcing card */}
-          <div className='py-10 pl-5 bg-gradient-to-br from-[green]/90 to-[red] text-white rounded-3xl relative h-[320px] flex items-end'> 
+          <div className='py-10 pl-5 bg-gradient-to-br from-[#210202] to-[#9e0e2b] text-white rounded-3xl relative h-[320px] flex items-end'> 
             <div>
               {/* Buy for me card */}
               <div className='mb-4'>
