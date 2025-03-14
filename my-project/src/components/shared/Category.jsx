@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './Button'
+import TrackB from './TrackB'
 import image1 from '../../assets/bm4.png'
 import image2 from '../../assets/sh1.png'
 
@@ -36,11 +37,11 @@ const Category = () => {
             <div>
               {/* Buy for me card */}
               <div className='mb-4'>
-                <p className='mb-[0px] font-bold  text-gray-400'>Need a Shipping to ship from china to</p>
-                <p className='text-2xl font-semibold mb-[0px]'>Ghana?</p>
+                <p className='mb-[0px] font-bold  text-gray-400'>Shipping to ship from china to</p>
+                <p className='text-2xl font-semibold mb-[0px]'>Ghana</p>
                 <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-8'>Shipping to GH</p>
-                <Button 
-                text='Buy4me'
+                <TrackB 
+                text='Track your Order' 
                 bgColor={"bg-primary"}
                 textColor={"text-white"}
                 />

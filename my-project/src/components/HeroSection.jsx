@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from "react-slick";
-import Button from './shared/Button';
+import Button from './shared/TrackB';
 
 
 const HeroData =[
