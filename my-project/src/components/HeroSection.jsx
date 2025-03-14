@@ -5,32 +5,28 @@ import Button from './shared/Button';
 
 const HeroData =[
   { id: 1, src: '/src/assets/HeroS1.png', alt: 'Slide 1',
-    subtile:"subtitle of the slide 1",
-    title:"title of the slide 1",
-    description:"Description of the slide 1",
+    subtile:"Logisctic Services",
+    title:"Fofoofo Imports",
+    description:"Ship goods from China to Ghana",
    },
 
 
   { id: 2, src: '/src/assets/heros2.png', alt: 'Slide 2',
-    subtile:"subtitle of the slide 2",
-    title:"title of the slide 2",
-    description:"Description of the slide 2",
+    subtile:"Buy for me",
+    title:"Fofoofo Imports",
+    description:"let's buy for you FROM CHINA",
   },
-  { id: 3, src: '/src/assets/bm4.jpg', alt: 'Slide 3',
-    subtile:"subtitle of the slide 3",
-    title:"title of the slide 3",
-    description:"Description of the slide 3",
+  { id: 3, src: '/src/assets/rmbi.png', alt: 'Slide 3',
+    subtile:"Paying Suppliers",
+    title:"Fofoofo Imports",
+    description:"RMB TRANSACTIOnS MADE EASY",
    },
-  { id: 4, src: '/src/assets/bm5.jpg', alt: 'Slide 4' ,
-    subtile:"subtitle of the slide 4",
-    title:"title of the slide 4",
-    description:"Description of the slide 4",
+  { id: 4, src: '/src/assets/store.png', alt: 'Slide 4' ,
+    subtile:"Wholesale-Products",
+    title:"Buy&Sell",
+    description:"Buy Goods at cheaper prices",
   },
-  { id: 5, src: '/src/assets/bm6.jpg', alt: 'Slide 5',
-    subtile:"subtitle of the slide 5",
-    title:"title of the slide 5",
-    description:"Description of the slide 5",
-   },
+  
  
 ]
 
@@ -41,7 +37,7 @@ function HeroSection() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 14000,
         cssEase: "ease-in-out",
         pauseOnFocus: true,
         pauseOnHover: false,
@@ -61,7 +57,7 @@ function HeroSection() {
                       <div className='flex flex-col justify-center gap-4 sm:pl-3 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10'>
                         <h1 className='text-2xl sm:text-6xl lg:text-2xl font-bold'>{data.subtile}</h1>
                         <h1 className=' text-5xl sm:text-6xl lg:text-7xl font-bold'>{data.title}</h1>
-                        <h1 className='text-5xl uppercase text-[Green] dark:text-white/5 sm:text-[80px] md:text-[100px]xl:text-[150px] font-bold'>{data.description}</h1>
+                        <h1 className='text-5xl uppercase text-[#d6247a] dark:text-white/5 sm:text-[80px] md:text-[100px]xl:text-[150px] font-bold'>{data.description}</h1>
                         <div>
                           <Button
                               text='Shop Now'
@@ -76,7 +72,7 @@ function HeroSection() {
                         <img
                           src={data.src}
                           alt={data.alt}
-                          className='w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)] relative z-40'
+                          className='w-[300px] h-[300px] sm:h-[550px] sm:w-[400px] sm:scale-105 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)] relative z-40'
                         />
                       </div> 
                       </div>
