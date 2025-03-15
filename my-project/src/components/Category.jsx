@@ -4,7 +4,7 @@ import TrackB from './shared/TrackB'
 import Buy4meB from './shared/Buy4meB'
 import image1 from './../assets/bm4.png'
 import image2 from './../assets/sh1.png'
-
+import image3 from './../assets/sen.png'
 
 
 const Category = () => {
@@ -62,16 +62,15 @@ const Category = () => {
                 <p className='text-2xl font-semibold mb-[30px]'>China?</p>
                 <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Sourcing</p>
                 <Buy4meB 
-                text='Buy4me'
+                text='Get New Suppliers'
                 bgColor={"bg-white"}
                 textColor={"text-primary"} 
                 />
               </div>
             </div>
-            <img  src={image1}
-            className='w-320px absolute bottom-0'
+            <img  src={image3}
+            className='w-310px absolute bottom-0 mx-5'
             />
-
         </div>
       </div>
     </div>
