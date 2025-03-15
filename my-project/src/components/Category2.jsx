@@ -14,7 +14,7 @@ const Category = () => {
       <div className='container'>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
 
-          <div className='col-span-2 py-10 pl-5 bg-gradient-to-br  from-[#fd4343] to-[#f6123f] text-white rounded-3xl relative h-[320px] flex items-end'> 
+          <div className='col-span-2 py-10 pl-5 bg-gradient-to-br  from-[#fd4343] to-[#f62d55] text-white rounded-3xl relative h-[320px] flex items-end'> 
             <div>
               {/* Buy for me card */}
               <div className='mb-4'>
@@ -47,7 +47,7 @@ const Category = () => {
           </div>
 
           {/* sourcing card */}
-          <div className='py-10 pl-5 bg-gradient-to-br from-[#f39c45] to-[#ff7e15] text-white rounded-3xl relative h-[320px] flex items-end'> 
+          <div className='py-10 pl-5 bg-gradient-to-br from-[#121342] to-[#100435] text-white rounded-3xl relative h-[320px] flex items-end'> 
             <div>
               <div className='mb-4'>
                 <p className='mb-[0px] font-bold  text-white'>Need help to order from</p>
