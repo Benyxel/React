@@ -13,6 +13,7 @@ import Shipping from './pages/Quicklinks/Shipping'
 import Tranding from './pages/Quicklinks/Tranding'
 import Whole from './pages/Quicklinks/Whole'
 import Suppliers from './pages/Quicklinks/Suppliers'
+import Contact from './pages/Contact'
 
  function App() {
   return (
@@ -21,6 +22,7 @@ import Suppliers from './pages/Quicklinks/Suppliers'
           <Route path='/' element={<Home />} />
           <Route path = '/' element={<Shop/>}/>
           <Route path = '/' element={<Service/>}/>
+          <Route path = '/' element={<Contact/>}/>
           <Route path = '/' element={<About/>}/>
           <Route path = '/' element={<Checkout/>}/>
           <Route path = '/' element={<Login/>}/>

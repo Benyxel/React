@@ -9,6 +9,7 @@ const MenuLinks = [
     { name: 'Shop', href: '#' },
     { name: 'Service', href: '#' },
     { name: 'About', href: '#' },
+    { name: 'Contact', href: '#' },
 ];
 
 const DropdownLinks = [
@@ -37,7 +38,7 @@ return (
                 MenuLinks.map((data,index)=>(
                 <li key={index}>
                 <a href={data.href}
-                className='inline-block px-4 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200 '
+                className='inline-block px-2 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200 '
                 >{data.name}</a>
                 </li>
                 ))}
