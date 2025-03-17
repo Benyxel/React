@@ -89,7 +89,7 @@ export default function Navbar() {
                 </li>
               </ul>
 
-              <hr className='w-14 border-none h-[1.5px] bg-gray-700' />
+              
             </div>
           </div>
 
