@@ -8,7 +8,6 @@ import Category2 from '../components/Category2'
 const home = () => {
   return (
     <div>
-       <Navbar/>
       <HeroSection/>
       <Category/>
       <Category2/>

@@ -3,27 +3,37 @@ import {IoMdSearch} from 'react-icons/io';
 import {FaShoppingCart} from 'react-icons/fa';
 import { IoMdArrowDropdown } from "react-icons/io";
 import DarkMode from './DarkMode';
+import { href, Link, NavLink } from 'react-router-dom';
+
+
+
 
 const MenuLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'Shop', href: '#' },
-    { name: 'Service', href: '#' },
-    { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Home', href: '/' },
+    { name: 'Shop', href: '/Shop' },
+    { name: 'Service', href: '/Service' },
+    { name: 'About', href: '/About' },
+    { name: 'Contact', href: '/ Contact' },
 ];
 
 const DropdownLinks = [
-    {name: 'Buy4me', href: '#'},
-    {name: 'Shipping', href: '#'},
-    {name: 'Suppliers', href: '#'},
-    {name: 'Trending products ', href: '#'},
-    {name: 'Wholesale ', href: '#'},
+    {name: 'Buy4me', href: '/Buy4me'},
+    {name: 'Shipping', href: '/Shipping'},
+    {name: 'Suppliers', href: '/Suppliers'},
+    {name: 'TrendingProducts ', href: '/Tranding'},
+    {name: 'Wholesale ', href: '/Wholesale'},
+    {name: 'Training', href: '/Training'},
+    
+    {name: 'AlipayPayment', href: '/ AlipayPayment'}
+    
 ]
 
 export default function Navbar() {
 return (
+   
 
     <div className='bg-white shadow-md dark:bg-gray-900 dark:text-white duration-200 relativ z-40'>
+    
     <div className='py-4'>
         <div className="container flex justify-between">
             <div className='flex items-center gap-12' >
@@ -33,13 +43,16 @@ return (
             href="#">Buy&Sell</a>
             
             <div className='hidden lg:block'>
+            <NavLink  >
             <ul className='flex items-start gap-5'>
+               
                 {
                 MenuLinks.map((data,index)=>(
                 <li key={index}>
                 <a href={data.href}
                 className='inline-block px-2 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200 '
-                >{data.name}</a>
+                 
+                >{data.name}</a> 
                 </li>
                 ))}
                 {/* Dropdown */}
@@ -51,22 +64,25 @@ return (
                         <IoMdArrowDropdown className='group-hover:rotate-180 duration-300 '/>
                     </span>
                     </a>
-
+                
                     {/* Dropdown list */}
                 <div className='absolute z-[9999] hidden group-hover:block w-[180px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white '>
                     <ul className='space-y-2'>
                         {DropdownLinks.map((data,index)=>(
                     <li key={index}>
-                        <a href={data.href}
+                        <Link to={data.href}
                         className='text-gray-500 hover:text-black dark:hover:text-white p-1 duration-200 inline-block w-full hover:bg-brandGreen/20 rounded-md font-semibold'
-                        >{data.name}</a>
+                        >{data.name}</Link>
                     </li>
                         ))}
+                        
                     </ul>
                 </div>
                 </li>     
                 
             </ul>
+                <hr className='Ben w-14 border-none h-[1.5px] bg-gray-700 hidden' />
+            </NavLink >            
             </div>
             </div>
 
