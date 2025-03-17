@@ -1,11 +1,13 @@
 import React from 'react'
+import HeroSection from '../../components/HeroSection'
 
-const Whole = () => {
+const Wholesale = () => {
   return (
     <div>
-      
+      <HeroSection/>
+      wholesale
     </div>
   )
 }
 
-export default Whole
+export default Wholesale

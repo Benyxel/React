@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route} from 'react-router-dom'
 import Home from './pages/home'
-import Shop from './pages/shop'
+import Shop from './pages/Shop'
 import Service from './pages/Service'
 import About from './pages/About'
 import Checkout from './pages/checkout'
@@ -10,7 +10,7 @@ import Cart from './pages/cart'
 import Buy4me from './pages/Quicklinks/Buy4me'
 import Orders from './pages/Orders'
 import Shipping from './pages/Quicklinks/Shipping'
-import Tranding from './pages/Quicklinks/Tranding'
+import Trending from './pages/Quicklinks/Trending'
 import Wholesale from './pages/Quicklinks/Wholesale'
 import Suppliers from './pages/Quicklinks/Suppliers'
 import Contact from './pages/Contact'
@@ -25,7 +25,7 @@ import Navbar from './components/Navbar'
       <Navbar/>
       <Routes>
           <Route path='/' element={<Home />} />
-          <Route path = '/Shop/:productId' element={<Shop/>}/>
+          <Route path = '/Shop' element={<Shop/>}/>
           <Route path = '/Service' element={<Service/>}/>
           <Route path = '/Contact' element={<Contact/>}/>
           <Route path = '/About' element={<About/>}/>
@@ -35,7 +35,7 @@ import Navbar from './components/Navbar'
           <Route path = '/Buy4me' element={<Buy4me/>}/>
           <Route path = '/Orders' element={<Orders/>}/>
           <Route path = '/Shipping' element={<Shipping/>}/>
-          <Route path = '/Tranding' element={<Tranding/>}/>
+          <Route path = '/Trending' element={<Trending/>}/>
           <Route path = '/Wholesale' element={<Wholesale/>}/>
           <Route path = '/Suppliers' element={<Suppliers/>}/>
           <Route path = '/PlaceOrder' element={<PlaceOrder/>}/>

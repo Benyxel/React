@@ -7,11 +7,13 @@ import { Link, NavLink } from 'react-router-dom'
 import { FaUser } from 'react-icons/fa'
 
 const MenuLinks = [
+    
   { name: 'Home', href: '/' },
   { name: 'Shop', href: '/Shop' },
   { name: 'Service', href: '/Service' },
   { name: 'About', href: '/About' },
   { name: 'Contact', href: '/Contact' },
+  
 ]
 
 const DropdownLinks = [
@@ -27,7 +29,7 @@ const DropdownLinks = [
 const DropdownUser = [
   { name: 'My Profile', href: '/MyProfile' },
   { name: 'Orders', href: '/Orders' },
-  { name: 'Logout', href: '/Logout' },
+  { name: 'Login', href: '/Login' },
 ]
 
 export default function Navbar() {
@@ -118,7 +120,7 @@ export default function Navbar() {
                 <ul>
                 <li className='relative cursor-pointer group'>
                   <a
-                    href='#'
+                    href='/MyProfile'
                     className='flex items-center gap-[2px] font-semibold text-gray-500 dark:hover:text-white hover:text-black'
                   >
                     <FaUser />

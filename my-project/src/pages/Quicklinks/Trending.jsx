@@ -1,13 +1,13 @@
 import React from 'react'
 import HeroSection from '../../components/HeroSection'
 
-const Training = () => {
+const Trending = () => {
   return (
     <div>
       <HeroSection/>
-      Traing
+      Trend
     </div>
   )
 }
 
-export default Training
+export default Trending

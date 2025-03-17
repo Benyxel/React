@@ -5,7 +5,7 @@ import Buy4meB from './shared/Buy4meB'
 import image1 from './../assets/bm4.png'
 import image2 from './../assets/sh1.png'
 import image3 from './../assets/sen.png'
-
+import { Link } from 'react-router-dom'
 
 const Category = () => {
 
@@ -21,11 +21,15 @@ const Category = () => {
                 <p className='mb-[0px] font-bold  text-gray-400'>Need help to order from</p>
                 <p className='text-2xl font-semibold mb-[30px]'>China?</p>
                 <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Buy for me Service</p>
+                <Link to={'/Buy4me'}
+                >
                 <Buy4meB 
+                
                 text='Buy4me'
                 bgColor={"bg-white"}
                 textColor={"text-white"} 
                 />
+                </Link>
               </div>
             </div>
           
@@ -42,11 +46,13 @@ const Category = () => {
                 <p className='mb-[0px] font-bold  text-gray-400'>Shipping to ship from china to</p>
                 <p className='text-2xl font-semibold mb-[30px]'>Ghana</p>
                 <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Shipping to GH</p>
+                <Link to={'/Shipping'}> 
                 <TrackB 
                 text='Track your Order' 
                 bgColor={"bg-white"}
                 textColor={"text-white"}
                 />
+                </Link>
               </div>
             </div>
             <img  src={image2}
@@ -61,11 +67,13 @@ const Category = () => {
                 <p className='mb-[0px] font-bold  text-white'>Need help to order from</p>
                 <p className='text-2xl font-semibold mb-[30px]'>China?</p>
                 <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Sourcing</p>
+                <Link to={'/Suppliers'}>
+                
                 <Buy4meB 
                 text='Get New Suppliers'
                 bgColor={"bg-white"}
                 textColor={"text-primary"} 
-                />
+                /></Link>
               </div>
             </div>
             <img  src={image3}
