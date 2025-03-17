@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import HeroSection from '../components/HeroSection'
 import Category from '../components/Category'
 import Category2 from '../components/Category2'
+import NewArrivals from '../components/NewArrivals'
 
 
 const home = () => {
@@ -11,6 +12,7 @@ const home = () => {
       <HeroSection/>
       <Category/>
       <Category2/>
+      <NewArrivals/>
     </div>
   )
 }

@@ -25,9 +25,9 @@ const DarkMode = () => {
   return (
     <div className='relative' onClick={toggleTheme}>
       {theme === "dark" ? (
-        <BsToggle2On className='text-[25px] cursor-pointer translate-all duration-300' />
+        <BsToggle2On className='text-[25px] cursor-pointer translate-all duration-300  hover:text-brandGreen' />
       ) : (
-        <BsToggle2Off className='text-[25px] cursor-pointer translate-all duration-300' />
+        <BsToggle2Off className='text-[25px] cursor-pointer translate-all duration-300  hover:text-brandGreen' />
       )}
     </div>
   );
