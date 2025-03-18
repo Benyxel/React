@@ -1,24 +1,21 @@
 import { createContext } from "react";
-import App from "../App";
 
 export const ShopContext = createContext();
 
-const shopContextProvider = (props) =>{
-    const currency = '₵'
+const ShopContextProvider = (props) => {
+    const currency = '₵';
     const delivery_fee = 10;
-    const products = []
-
-
+    const products = []; // Define your products array here
 
     const value = {
         products, currency, delivery_fee
-    }
+    };
 
-    return(
+    return (
         <ShopContext.Provider value={value}>
-            {prop.children}
+            {props.children}
         </ShopContext.Provider>
-    )
+    );
 }
 
-export default shopContextProvider;
+export default ShopContextProvider;
