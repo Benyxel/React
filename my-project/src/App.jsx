@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route} from 'react-router-dom'
 import Home from './pages/home'
 import Shop from './pages/Shop'
-import Service from './pages/Service'
+import Services from './pages/Services'
 import About from './pages/About'
 import Checkout from './pages/checkout'
 import Login from './pages/Login'
@@ -27,7 +27,7 @@ import LastestProducts from './components/LastestProducts'
       <Routes>
           <Route path='/' element={<Home />} />
           <Route path = '/Shop' element={<Shop/>}/>
-          <Route path = '/Service' element={<Service/>}/>
+          <Route path = '/Services' element={<Services/>}/>
           <Route path = '/Contact' element={<Contact/>}/>
           <Route path = '/About' element={<About/>}/>
           <Route path = '/Checkout' element={<Checkout/>}/>
