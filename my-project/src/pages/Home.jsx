@@ -10,6 +10,7 @@ import LastestProducts from '../components/LastestProducts'
 const home = () => {
   return (
     <div>
+      
       <HeroSection/>
       <Category/>
       <Category2/>

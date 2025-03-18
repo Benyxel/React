@@ -9,13 +9,11 @@ import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 
 const MenuLinks = [
-    
   { name: 'Home', href: '/' },
   { name: 'Shop', href: '/Shop' },
-  { name: 'Service', href: '/Service' },
+  { name: 'Services', href: '/Services' },
   { name: 'About', href: '/About' },
   { name: 'Contact', href: '/Contact' },
-  
 ]
 
 const DropdownLinks = [
@@ -35,11 +33,9 @@ const DropdownUser = [
 ]
 
 export default function Navbar() {
-
-    const [visble,setVisible] = useState(false)
+  const [visible, setVisible] = useState(false)
 
   return (
-    
     <div className='bg-white shadow-md dark:bg-gray-900 dark:text-white duration-200 relative z-40'>
       <div className='py-4'>
         <div className='container flex justify-between'>
@@ -52,7 +48,7 @@ export default function Navbar() {
             </Link>
 
             <div className='hidden lg:block'>
-              <ul className='flex items-start gap-3 text-[18px]' >
+              <ul className='flex items-start gap-3 text-[18px]'>
                 {MenuLinks.map((data, index) => (
                   <li key={index}>
                     <NavLink
@@ -86,7 +82,7 @@ export default function Navbar() {
                         <li key={index}>
                           <Link
                             to={data.href}
-                            className='text-gray-500 hover:text-black dark:hover:text-white p-0 duration-200 inline-block w-full hover:bg-brandGreen/20  font-small'
+                            className='text-gray-500 hover:text-black dark:hover:text-white p-1 duration-200 inline-block w-full hover:bg-brandGreen/20 rounded-md font-semibold'
                           >
                             {data.name}
                           </Link>
@@ -96,8 +92,6 @@ export default function Navbar() {
                   </div>
                 </li>
               </ul>
-
-              
             </div>
           </div>
 
@@ -122,7 +116,7 @@ export default function Navbar() {
             </div>
              
              {/* userIcon */}
-            <div>
+            <div className='hidden sm:block'>
                 <ul>
                 <li className='relative cursor-pointer group'>
                   <a
@@ -158,75 +152,104 @@ export default function Navbar() {
  ?: side Menu Icon for small screen */}
 
 
-            <div className=' flex '>
-                                    {/*  Menu Icon*/}
-                                    <IoMdMenu onClick={() => setVisible(true)} className='text-3xl text-gray-500 hover:text-black dark:hover:text-white cursor-pointer sm:hidden ' />
-                        
-                        <div className={`fixed top-0 right-0 bottom-0 bg-white/95 transition-transform transform ${visble ? 'translate-x-0' : 'translate-x-full'} w-1/2 sm:w-64 z-50 dark:bg-black/90 sm:hidden `}>
+            <div className='flex' >
+              {/*  Menu Icon */}
+              <IoMdMenu onClick={() => setVisible(true)} className='text-3xl text-gray-500 hover:text-black dark:hover:text-white cursor-pointer sm:hidden' />
+              <div className={`fixed top-0 right-0 bottom-0 bg-white/95 transition-transform transform ${visible ? 'translate-x-0' : 'translate-x-full'} w-1/2 sm:w-64 z-50 dark:bg-black/90 sm:hidden `}>
+                <div className='flex flex-col text-gray-600 h-full '>
+                  <div className='flex items-center p-2 border-b'>
+                     <div className='flex items-center gap-2' >
+                    <IoClose onClick={() => setVisible(false)} className='h-8 cursor-pointer ml-3 text-[30px] duration-300 dark:text-white hover:text-primary' />
+                    <p className='text-lg font-semibold dark:text-white'>Close</p>
 
-                        <div className='flex flex-col text-gray-600 h-full'>
-                            <div className='flex items-center  p-2 border-b gap-2 '>
-                            <IoClose onClick={() => setVisible(false)} className='h-8 cursor-pointer ml-3 text-[30px] duration-300 dark:text-white hover:text-primary' />    
-                            <p className='text-lg font-semibold dark:text-white'>Close</p>
-                                
-                            
-                            </div>
-                            <ul className='py-2 pl-6'>
-                            {MenuLinks.map((data, index) => (
-                                <li key={index} className='py-1'>
-                                <NavLink
-                                    to={data.href}
-                                    className={({ isActive }) =>
-                                    isActive
-                                        ? 'inline-block px-2 font-semibold text-black dark:text-white duration-200'
-                                        : 'inline-block px-2 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200'
-                                    }
-                                    onClick={() => setVisible(false)} // Close the menu when a link is clicked
-                                >
-                                    {data.name}
-                                </NavLink>
-                                </li>
-                            ))}
-                     </ul>
-
-                     {/* quick link */}
-
-                     <ul className='py-2 pl-6'>
-
-                     <li className='relative cursor-pointer group'>
+{/* user profile on small screen */}
+                 
+                  <ul>
+                <li className='relative cursor-pointer group'>
                   <a
-                    href='#'
-                    className='flex items-center gap-[0] font-semibold text-gray-500 dark:hover:text-white hover:text-black'
+                    href='/MyProfile'
+                    className='flex items-center gap-[2px] font-semibold text-gray-500 dark:hover:text-white hover:text-black'
                   >
-                    Quick links
+                    <FaUser className='text-2xl ' />
                     <span>
                       <IoMdArrowDropdown className='group-hover:rotate-180 duration-300' />
                     </span>
                   </a>
 
                   {/* Dropdown list */}
-                  <div className='absolute z-[9999] hidden group-hover:block w-[180px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white'>
+                  <div className='absolute z-[9999] hidden group-hover:block w-[180px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white '>
                     <ul className='space-y-1'>
-                      {DropdownLinks.map((data, index) => (
+                      {DropdownUser.map((data, index) => (
                         <li key={index}>
-                        <NavLink onClick={() => setVisible(false)}>
+                          <NavLink onClick={() => setVisible(false)}>
                           <Link
                             to={data.href}
-                            className='text-gray-500 hover:text-black dark:hover:text-white p-0 duration-200 inline-block w-full hover:bg-brandGreen/20  font-small'
+                            className='text-gray-500 hover:text-black dark:hover:text-white p-1 duration-200 inline-block w-full hover:bg-brandGreen/20 rounded-md font-semibold'
                           >
                             {data.name}
                           </Link>
-                        </NavLink>
+                          </NavLink>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </li>
+                </ul>
 
-                          
-                     </ul>
+                  </div>
+
+                  </div>
+                  <ul className='py-2 pl-6'>
+                    {MenuLinks.map((data, index) => (
+                      <li key={index} className='py-1'>
+                        <NavLink
+                          to={data.href}
+                          className={({ isActive }) =>
+                            isActive
+                              ? 'inline-block px-2 font-semibold text-black dark:text-white duration-200'
+                              : 'inline-block px-2 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200'
+                          }
+                          onClick={() => setVisible(false)} // Close the menu when a link is clicked
+                        >
+                          {data.name}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* quick link */}
+                  <ul className='py-2 pl-6 '>
+                    <li className='relative cursor-pointer group '>
+                      <a
+                        href='#'
+                        className='flex items-center gap-[0] font-semibold text-gray-500 dark:hover:text-white hover:text-black'
+                      >
+                        Quick links
+                        <span>
+                          <IoMdArrowDropdown className='group-hover:rotate-180 duration-300' />
+                        </span>
+                      </a>
+                      {/* Dropdown list */}
+                      <div className='absolute z-[9999] hidden group-hover:block w-[180px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white '>
+                        <ul className='space-y-1'>
+                          {DropdownLinks.map((data, index) => (
+                            <li key={index}>
+                              <NavLink onClick={() => setVisible(false)}>
+                                <Link
+                                  to={data.href}
+                                  className='text-gray-500 hover:text-black dark:hover:text-white p-0 duration-200 inline-block w-full hover:bg-brandGreen/20 font-small'
+                                >
+                                  {data.name}
+                                </Link>
+                              </NavLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-             </div>
+              </div>
             </div>
           </div>
         </div>

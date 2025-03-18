@@ -8,7 +8,7 @@ import image3 from './../assets/payi.png'
 
 
 
-const Category = () => {
+const Category2 = () => {
 
   return (
     <div className='py-10'>
@@ -16,7 +16,7 @@ const Category = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
 
           <div className='col-span-2 py-10 pl-5 bg-gradient-to-r from-gray-300 to-gray-100
-        dark:from-gray-900 dark:to-gray-800 text-primary rounded-1xl relative h-[320px] flex items-end'> 
+         text-primary rounded-1xl relative h-[320px] flex items-end'> 
             <div>
               {/* Buy for me card */}
               <div className='mb-4'>
@@ -69,4 +69,4 @@ const Category = () => {
   )
 }
 
-export default Category
+export default Category2

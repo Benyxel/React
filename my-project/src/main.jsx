@@ -9,7 +9,7 @@ import ShopContextProvider from './context/ShopContext';
 
 ReactDom.createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter >
       <ShopContextProvider>
         <App />
       </ShopContextProvider>

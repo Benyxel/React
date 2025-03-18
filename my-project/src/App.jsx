@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route} from 'react-router-dom'
 import Home from './pages/home'
 import Shop from './pages/Shop'
-import Services from './pages/Services'
+import Services from './pages/Service'
 import About from './pages/About'
 import Checkout from './pages/checkout'
 import Login from './pages/Login'
@@ -20,10 +20,13 @@ import AlipayPayment from './pages/Quicklinks/AlipayPayment'
 import Navbar from './components/Navbar'
 import LastestProducts from './components/LastestProducts'
 
+
  function App() {
   return (
-    <div>
+    <main>
       <Navbar/>
+    <div className='bg-white dark:bg-gray-900 dark:text-white duration-200 '>
+      
       <Routes>
           <Route path='/' element={<Home />} />
           <Route path = '/Shop' element={<Shop/>}/>
@@ -43,8 +46,8 @@ import LastestProducts from './components/LastestProducts'
           <Route path = '/Training' element={<Training/>}/>
           <Route path = '/AlipayPayment' element={<AlipayPayment/>}/>
       </Routes>
-    
-    </div>
+      
+    </div></main>
   )
 }
 
