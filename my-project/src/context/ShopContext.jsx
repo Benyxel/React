@@ -3,10 +3,11 @@ import App from "../App";
 
 export const ShopContext = createContext();
 
-const shopContextProvider = () =>{
+const shopContextProvider = (props) =>{
     const currency = '₵'
     const delivery_fee = 10;
-    
+    const products = []
+
 
 
     const value = {
