@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection'
 import Category from '../components/Category'
 import Category2 from '../components/Category2'
 import NewArrivals from '../components/NewArrivals'
+import LastestProducts from '../components/LastestProducts'
 
 
 const home = () => {
@@ -13,6 +14,7 @@ const home = () => {
       <Category/>
       <Category2/>
       <NewArrivals/>
+      <LastestProducts/>
     </div>
   )
 }

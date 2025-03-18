@@ -18,6 +18,7 @@ import PlaceOrder from './pages/PlaceOrder'
 import Training from './pages/Quicklinks/Training'
 import AlipayPayment from './pages/Quicklinks/AlipayPayment'
 import Navbar from './components/Navbar'
+import LastestProducts from './components/LastestProducts'
 
  function App() {
   return (
