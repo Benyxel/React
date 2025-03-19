@@ -1,5 +1,10 @@
 import React from 'react';
-
+import {
+  FaCarSide,
+  FaWallet,
+  FaHeadphoneAlt,
+  FaCheckCircle,
+} from 'react-icons/fa';
 
 const ServiceData = [
   {
