@@ -178,7 +178,7 @@ export default function Navbar() {
 
                   {/* Dropdown list */}
                   <div className='absolute z-[9999] hidden group-hover:block w-[180px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white '>
-                    <ul className='space-y-0'>
+                    <ul className='space-y-0  '>
                       {DropdownUser.map((data, index) => (
                         <li key={index}>
                           <NavLink onClick={() => setVisible(false)}>
