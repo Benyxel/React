@@ -22,7 +22,7 @@ const Category2 = () => {
               <div className='mb-4'>
                 <p className='mb-[0px] font-bold  text-primary'>Buy Directly From us</p>
                 <p className='text-2xl font-semibold mb-[30px]'>Qualitly and Affordable</p>
-                <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Wholesale Prices</p>
+                <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Wholesale Prices Wholesale Prices</p>
                 
               </div>
             </div>

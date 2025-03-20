@@ -66,7 +66,7 @@ const Category = () => {
               <div className='mb-4'>
                 <p className='mb-[0px] font-bold  text-white'>Need help to order from</p>
                 <p className='text-2xl font-semibold mb-[30px]'>China?</p>
-                <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Sourcing</p>
+                <p className='text-4xl xl:text-5xl font-bold opacity-20 mb-10'>Sourcing Sourcing Sourcing</p>
                 <Link to={'/Suppliers'}>
                 
                 <Buy4meB 
