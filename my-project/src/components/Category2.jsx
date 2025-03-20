@@ -16,7 +16,7 @@ const Category2 = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
 
           <div className='col-span-2 py-10 pl-5 bg-gradient-to-r from-gray-300 to-gray-100
-         text-primary rounded-1xl relative h-[320px] flex items-end'> 
+         text-primary rounded-3xl relative h-[320px] flex items-end'> 
             <div>
               {/* Buy for me card */}
               <div className='mb-4'>
@@ -28,12 +28,12 @@ const Category2 = () => {
             </div>
           
             <img  src={image1}
-            className='w-[450px] mx-[240px] absolute bottom-0   '
+            className='w-[500px]  absolute bottom-0  mx-10 '
             />
           </div>
 
           {/* shipping card */}
-          <div className=' py-10 pl-5 bg-gradient-to-br  from-brandGreen/90 to-brandGreen/100 text-white rounded-1xl relative h-[320px] flex items-end'> 
+          <div className=' py-10 pl-5 bg-gradient-to-br  from-brandGreen/90 to-brandGreen/100 text-white rounded-2xl relative h-[320px] flex items-end'> 
             <div>
               {/* Buy for me card */}
               <div className='mb-4'>
@@ -49,7 +49,7 @@ const Category2 = () => {
           </div>
 
           {/* sourcing card */}
-          <div className='py-10 pl-5 bg-gradient-to-br from-[#121342] to-[#100435] text-white rounded-1xl relative h-[320px] flex items-end'> 
+          <div className='py-10 pl-5 bg-gradient-to-br from-[#121342] to-[#100435] text-white rounded-2xl relative h-[320px] flex items-end'> 
             <div>
               <div className='mb-4'>
                 <p className='mb-[0px] font-bold  text-white'>Need help to pay your suppliers in</p>

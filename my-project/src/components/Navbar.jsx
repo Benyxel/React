@@ -82,7 +82,7 @@ export default function Navbar() {
                         <li key={index}>
                           <Link
                             to={data.href}
-                            className='text-gray-500 hover:text-black dark:hover:text-white p-1 duration-200 inline-block w-full hover:bg-brandGreen/20 rounded-md font-semibold'
+                            className='text-gray-500 hover:text-black dark:hover:text-white p-1 duration-200 inline-block w-full hover:bg-brandGreen/20 rounded-md '
                           >
                             {data.name}
                           </Link>

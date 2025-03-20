@@ -12,9 +12,9 @@ const Category = () => {
   return (
     <div className='py-10'>
       <div className='container'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className=' grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
 
-          <div className=' py-10 pl-5 bg-gradient-to-br from-black/90 to-black/70 text-white rounded-3xl relative h-[320px] flex items-end'> 
+          <div className=' py-10 pl-5 bg-gradient-to-br from-black/90 to-black/70 text-white rounded-2xl relative h-[320px] flex items-end'> 
             <div>
               {/* Buy for me card */}
               <div className='mb-4'>
@@ -39,7 +39,7 @@ const Category = () => {
           </div>
 
           {/* shipping card */}
-          <div className=' py-10 pl-5 bg-gradient-to-br from-[#210202] to-[#9e0e2b] text-white rounded-3xl relative h-[320px] flex items-end'> 
+          <div className=' py-10 pl-5 bg-gradient-to-br from-[#210202] to-[#9e0e2b] text-white rounded-2xl relative h-[320px] flex items-end'> 
             <div>
               {/* Buy for me card */}
               <div className='mb-4'>
@@ -61,7 +61,7 @@ const Category = () => {
           </div>
 
           {/* sourcing card */}
-          <div className='py-10 pl-5 bg-gradient-to-br from-[#f39c45] to-[#ff7e15] text-white rounded-3xl relative h-[320px] flex items-end'> 
+          <div className='py-10 col-span-2 pl-5 bg-gradient-to-br from-[#f39c45] to-[#ff7e15] text-white rounded-2xl relative h-[320px] flex items-end'> 
             <div>
               <div className='mb-4'>
                 <p className='mb-[0px] font-bold  text-white'>Need help to order from</p>
@@ -77,7 +77,7 @@ const Category = () => {
               </div>
             </div>
             <img  src={image3}
-            className='w-310px absolute bottom-0 mx-5'
+            className='w-[500px] absolute bottom-0 mx-4'
             />
         </div>
       </div>
