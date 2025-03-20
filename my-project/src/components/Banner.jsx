@@ -1,15 +1,6 @@
 import React from 'react'
 import bimg1 from '../assets/bimg1.png'
 
-const BannerData = {
-    rate: "200$",
-    title: "Fine Smile",
-    date: "10 jan to jan",
-    image: bimg1,
-    title2: "Air Solo Bass",
-    title3: "Winter Sale",
-
-}
 
 
 const Banner = ({data}) => {
@@ -24,8 +15,8 @@ const Banner = ({data}) => {
            <p className='text-sm'>{data.date}</p>
         </div>
          
-         <div>
-            <img src={data.image} alt={"hsd"}/>
+         <div className='h-full flex items-center'>
+            <img src={data.image} alt='' className='scale-120 w-[250px] sm:w-[400px]  md:w-[340px] mx-auto drop-shadow-2xl object-cover'/>
          </div>
           
            
