@@ -5,6 +5,7 @@ import Category from '../components/Category'
 import Category2 from '../components/Category2'
 import NewArrivals from '../components/NewArrivals'
 import LastestProducts from '../components/LastestProducts'
+import ServicesC from '../components/ServicesC'
 
 
 
@@ -18,10 +19,10 @@ const Home = () => {
       <HeroSection/>
       <Category/>
       <Category2/>
-      
+      <ServicesC/>
       <NewArrivals/>
       <LastestProducts/>
-     
+      
     </div>
   )
 }
