@@ -16,7 +16,7 @@ const BannerData = {
   image: bimg1,
   title2: "Air Solo Bass",
   title3: "Winter Sale",
-  bgColor: "#000000" // Add a background color if needed
+  bgColor: "#f42c37" ,// Add a background color if needed
 };
 
 const Home = () => {
