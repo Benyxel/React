@@ -8,6 +8,7 @@ import LastestProducts from '../components/LastestProducts';
 import ServicesC from '../components/ServicesC';
 import Banner from '../components/Banner';
 import bimg1 from '../assets/bimg1.png';
+import Products from '../components/Products';
 
 const BannerData = {
   rate: "200$",
@@ -16,6 +17,7 @@ const BannerData = {
   image: bimg1,
   title2: "Air Solo Bass",
   title3: "Winter Sale",
+  title4: "fofoofo import shipping is on sales at it best fofoofo import shipping is on sales at it best",
   bgColor: "#f42c37" ,// Add a background color if needed
 };
 
@@ -27,8 +29,7 @@ const Home = () => {
       <Category2 />
       <ServicesC />
       <Banner data={BannerData} />
-      <NewArrivals />
-      <LastestProducts />
+      <Products/>
     </div>
   );
 };
