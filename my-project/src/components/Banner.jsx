@@ -24,6 +24,9 @@ const Banner = ({data}) => {
            <p className='text-sm'>{data.date}</p>
         </div>
          
+         <div>
+            <img src={data.image} alt={"hsd"}/>
+         </div>
           
            
         </div>
