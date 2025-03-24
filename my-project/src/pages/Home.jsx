@@ -29,7 +29,7 @@ const Home = () => {
       <Category2 />
       <ServicesC />
       <Banner data={BannerData} />
-      <Products/>
+      <LastestProducts/>
     </div>
   );
 };
