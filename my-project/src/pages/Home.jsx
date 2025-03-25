@@ -1,5 +1,4 @@
 import React from 'react';
-
 import HeroSection from '../components/HeroSection';
 import Category from '../components/Category';
 import Category2 from '../components/Category2';
@@ -23,16 +22,17 @@ const BannerData = {
 
 const Home = () => {
   return (
-    <ShopContextProvider>
-    <div>
+     <div><ShopContextProvider>
+      
+   
       <HeroSection />
       <Category />
       <Category2 />
       <ServicesC />
       <Banner data={BannerData} />
       <LastestProducts/>
-    </div>
-    </ShopContextProvider>
+    
+    </ShopContextProvider></div>
   );
 };
 

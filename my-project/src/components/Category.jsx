@@ -4,7 +4,7 @@ import TrackB from './shared/TrackB'
 import Buy4meB from './shared/Buy4meB'
 import image1 from './../assets/bm4.png'
 import image2 from './../assets/sh1.png'
-import image3 from './../assets/sen.png'
+import image3 from '../assets/sen.png'
 import { Link } from 'react-router-dom'
 
 const Category = () => {
