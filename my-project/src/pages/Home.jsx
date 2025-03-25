@@ -8,6 +8,7 @@ import Banner from '../components/Banner';
 import bimg1 from '../assets/bimg1.png';
 
 import ShopContextProvider from '../context/ShopContext';
+import TrendingP from '../components/TrendingP';
 
 const BannerData = {
   rate: "200$",
@@ -31,7 +32,9 @@ const Home = () => {
       <ServicesC />
       <Banner data={BannerData} />
       <LastestProducts/>
+      <TrendingP/>
     </ShopContextProvider>
+
     </div>
   );
 };
