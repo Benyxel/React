@@ -22,8 +22,8 @@ const BannerData = {
 
 const Home = () => {
   return (
-     <div><ShopContextProvider>
-      
+     <div>
+      <ShopContextProvider>
    
       <HeroSection />
       <Category />
@@ -31,8 +31,8 @@ const Home = () => {
       <ServicesC />
       <Banner data={BannerData} />
       <LastestProducts/>
-    
-    </ShopContextProvider></div>
+    </ShopContextProvider>
+    </div>
   );
 };
 
