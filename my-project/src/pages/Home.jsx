@@ -3,12 +3,12 @@ import React from 'react';
 import HeroSection from '../components/HeroSection';
 import Category from '../components/Category';
 import Category2 from '../components/Category2';
-import NewArrivals from '../components/NewArrivals';
 import LastestProducts from '../components/LastestProducts';
 import ServicesC from '../components/ServicesC';
 import Banner from '../components/Banner';
 import bimg1 from '../assets/bimg1.png';
-import Products from '../components/Products';
+
+import ShopContextProvider from '../context/ShopContext';
 
 const BannerData = {
   rate: "200$",
@@ -23,6 +23,7 @@ const BannerData = {
 
 const Home = () => {
   return (
+    <ShopContextProvider>
     <div>
       <HeroSection />
       <Category />
@@ -31,6 +32,7 @@ const Home = () => {
       <Banner data={BannerData} />
       <LastestProducts/>
     </div>
+    </ShopContextProvider>
   );
 };
 
