@@ -1,17 +1,23 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import { IoMdArrowDropdown } from "react-icons/io";
+import Title from '../components/Title';
+import ProductItem from '../components/productItem';
 
 const Shop = () => {
 
   const { products}= useContext (ShopContext)
   const [showFilter, setShowFilter] = useState(true);
+  const [filterProducts,setShowFilterProducts] = useState([]);
+  useEffect(()=>{
+    setShowFilterProducts(products);
+  },[])
 
   return (
     <div className=' container flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
       <div className=' min-w-60'>
         <p onClick={()=>setShowFilter(!showFilter)} className='my-2 text-xl flex items-center cursor-pointer gap-2'>FILTERS
-        <IoMdArrowDropdown  className={`h-5 sm:hidden -rotate-90 ${showFilter ? 'rotate-40' : ''}` } />
+        <IoMdArrowDropdown  className={`h-5 sm:hidden  ${showFilter ? 'rotate-180' : ''}` } />
           
         </p>
 
@@ -55,8 +61,28 @@ const Shop = () => {
         </div>
       </div>
 
-      
-      
+      {/* right side */}
+      <div className='flex-1'>
+        <div className='flex justify-between text-base sm:text-2xl mb-4'>
+          <Title text1={'ALL'} text2={'PRODUCTS'}/>
+          {/* SORT */}
+          <select className='border-2 border-gray-300 text-sm px-2'>
+            <option value="relavent">Sort by: Relavent</option>
+            <option value="low-high">Sort by: Low to High</option>
+            <option value="high-low">Sort by: High to Low</option>
+          </select>
+
+        </div>
+
+        {/* map products */}
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
+            {
+              filterProducts.map((item,index)=>(
+                <ProductItem key={index}/>
+              ))
+            }
+        </div>
+      </div>
     </div>
   )
 }
