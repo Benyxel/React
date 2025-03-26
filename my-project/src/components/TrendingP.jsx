@@ -11,7 +11,7 @@ const TrendingP = () => {
     useEffect(()=>{
         const trending = products.filter((item)=>(item.trending));
 
-        setTrending(trending.slice(0,20))
+        setTrending(trending.slice(0,5))
     },[products])
 
    
