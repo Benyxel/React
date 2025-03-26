@@ -1,17 +1,18 @@
 import React, { useContext, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
-import { RxDropdownMenu } from "react-icons/rx";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const Shop = () => {
 
   const { products}= useContext (ShopContext)
-  const [showFilter, setShowFilter] = useState(false);
+  const [showFilter, setShowFilter] = useState(true);
 
   return (
     <div className=' container flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
       <div className=' min-w-60'>
-        <p  className='my-2 text-xl flex items-center cursor-pointer gap-2'>FILTERS
-          <img src={<RxDropdownMenu />} alt="" />
+        <p onClick={()=>setShowFilter(!showFilter)} className='my-2 text-xl flex items-center cursor-pointer gap-2'>FILTERS
+        <IoMdArrowDropdown  className={`h-5 sm:hidden -rotate-90 ${showFilter ? 'rotate-40' : ''}` } />
+          
         </p>
 
         <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? "" :"hidden"} sm:block` }>
