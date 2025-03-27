@@ -9,20 +9,50 @@ const Shop = () => {
   const { products}= useContext (ShopContext)
   const [showFilter, setShowFilter] = useState(true);
   const [filterProducts,setShowFilterProducts] = useState([]);
-  const [category,setCategory]= useState=([]);
-  const [subCategory,setSubcategory]= useState =([]);
+  const [category,setCategory]= useState([]);
+  const [subCategory,setSubcategory]= useState([]);
 
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)){
-       setCategory(prev=> prev.filter(item => item!== e.target.value)
+       setCategory(prev=> prev.filter(item => item !== e.target.value)
         
        )
     }
+
+    else{
+      setCategory(prev => [...prev,e.target.value])
+    }
   }
+
+
+  const showTrendingProducts = () => {
+    if (filterProducts.length > 0 && filterProducts.every(product => product.trending)) {
+      // If currently showing trending products, reset to all products
+      setShowFilterProducts(products);
+    } else {
+      // Otherwise, filter for trending products
+      setShowFilterProducts(products.filter(product => product.trending));
+    }
+  };
+
+
+  useEffect(() => {
+    if (category.length > 0) {
+      setShowFilterProducts(products.filter(product => category.includes(product.category)));
+    } else {
+      setShowFilterProducts(products);
+    }
+  }, [category, products]);
+
+  useEffect(() => {
+    setShowFilterProducts(products);
+  }, [products]);
 
   useEffect(()=>{
     setShowFilterProducts(products);
   },[])
+
+  
 
   return (
     <div className=' container flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
@@ -39,15 +69,15 @@ const Shop = () => {
 
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700  dark:text-white'>
             <p className='flex gap-2'>
-              <input className=' w-3' type="checkbox" value={'Men'}/>Men
+              <input className=' w-3' type="checkbox" value={'Men'} onChange={toggleCategory}/>Men
             </p>
 
             <p className='flex gap-2'>
-              <input className=' w-3' type="checkbox" value={'Women'}/>Women
+              <input className=' w-3' type="checkbox" value={'Women'}  onChange={toggleCategory}/>Women
             </p>
 
             <p className='flex gap-2'>
-              <input className=' w-3' type="checkbox" value={'Kids'}/>Kids
+              <input className=' w-3' type="checkbox" value={'Kids'} onChange={toggleCategory}/>Kids
             </p>
           </div>
         </div>
@@ -85,6 +115,14 @@ const Shop = () => {
 
         </div>
 
+        {/* trending products/all products btn */}
+        
+        <button onClick={showTrendingProducts} className="mb-4 px-4 py-2 bg-blue-500 text-white rounded">
+          {filterProducts.length > 0 && filterProducts.every(product => product.trending)
+            ? 'Show All Products'
+            : 'Show Trending Products'}
+        </button>
+
         {/* map products */}
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
             {
@@ -93,6 +131,7 @@ const Shop = () => {
               ))
             }
         </div>
+        
       </div>
     </div>
   )

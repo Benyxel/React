@@ -19,12 +19,12 @@ const HeroData =[
   { id: 3, src: '/src/assets/rmbi.png', alt: 'Slide 3',
     subtile:"Paying Suppliers",
     title:"Fofoofo Imports",
-    description:"RMB TRANSACTIOnS MADE EASY",
+    description:"RMB Trading MADE EASY",
    },
   { id: 4, src: '/src/assets/store.png', alt: 'Slide 4' ,
     subtile:"Wholesale-Products",
     title:"Buy&Sell",
-    description:"Buy for Goods at cheaper prices",
+    description:"Buy Goods at cheaper prices",
   },
   
  
@@ -37,11 +37,11 @@ function HeroSection() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplaySpeed: 14000,
+        autoplaySpeed: 4000,
         cssEase: "ease-in-out",
         pauseOnFocus: true,
         pauseOnHover: false,
-        autoplay: false,
+        autoplay: true,
         arrows: false,
 
       };

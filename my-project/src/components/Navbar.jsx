@@ -166,15 +166,15 @@ export default function Navbar() {
                  
                   <ul>
                 <li className='relative cursor-pointer group'>
-                  <a
-                    href='/MyProfile'
+                  <div
+                    
                     className='flex items-center gap-[2px] font-semibold text-gray-500 dark:hover:text-white hover:text-black'
                   >
                     <FaUser className='text-2xl ' />
                     <span>
                       <IoMdArrowDropdown className='group-hover:rotate-180 duration-300' />
                     </span>
-                  </a>
+                  </div>
 
                   {/* Dropdown list */}
                   <div className='absolute z-[9999] hidden group-hover:block w-[180px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-white '>
