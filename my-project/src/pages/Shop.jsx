@@ -9,6 +9,17 @@ const Shop = () => {
   const { products}= useContext (ShopContext)
   const [showFilter, setShowFilter] = useState(true);
   const [filterProducts,setShowFilterProducts] = useState([]);
+  const [category,setCategory]= useState=([]);
+  const [subCategory,setSubcategory]= useState =([]);
+
+  const toggleCategory = (e) => {
+    if (category.includes(e.target.value)){
+       setCategory(prev=> prev.filter(item => item!== e.target.value)
+        
+       )
+    }
+  }
+
   useEffect(()=>{
     setShowFilterProducts(products);
   },[])
@@ -26,7 +37,7 @@ const Shop = () => {
 
           {/* all categories */}
 
-          <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
+          <div className='flex flex-col gap-2 text-sm font-light text-gray-700  dark:text-white'>
             <p className='flex gap-2'>
               <input className=' w-3' type="checkbox" value={'Men'}/>Men
             </p>
@@ -45,7 +56,7 @@ const Shop = () => {
 
         <div className={`border border-gray-300 pl-5 py-3 my-5 ${showFilter ? "" :"hidden"} sm:block` }>
           <p className='mb-3 text-sm font-medium'>TYPE</p>
-          <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
+          <div className='flex flex-col gap-2 text-sm font-light text-gray-700  dark:text-white'>
             <p className='flex gap-2'>
               <input className=' w-3' type="checkbox" value={'Mouse'}/>Mouse
             </p>
@@ -63,10 +74,10 @@ const Shop = () => {
 
       {/* right side */}
       <div className='flex-1'>
-        <div className='flex justify-between text-base sm:text-2xl mb-4'>
-          <Title text1={'ALL'} text2={'PRODUCTS'}/>
+        <div className='flex justify-between text-base sm:text-2xl mb-4 '>
+          <Title text1={'ALL'} text2={'PRODUCTS'} />
           {/* SORT */}
-          <select className='border-2 border-gray-300 text-sm px-2'>
+          <select className='border-2 border-gray-300 text-sm px-2 dark:text-black'>
             <option value="relavent">Sort by: Relavent</option>
             <option value="low-high">Sort by: Low to High</option>
             <option value="high-low">Sort by: High to Low</option>
@@ -78,7 +89,7 @@ const Shop = () => {
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
             {
               filterProducts.map((item,index)=>(
-                <ProductItem key={index}/>
+                <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price}/>
               ))
             }
         </div>
