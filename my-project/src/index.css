@@ -43,3 +43,16 @@
   font-family: outfit;
 }
 
+@media (max-width: 640px) {
+  .animate-scroll {
+    display: none;
+    animation: none; /* Disable animation on small screens */
+  }
+}
+
+@media (min-width: 641px) {
+  .animate-scroll {
+    animation: scroll 10s linear infinite; /* Enable animation on larger screens */
+  }
+}
+

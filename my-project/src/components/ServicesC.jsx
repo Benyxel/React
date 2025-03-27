@@ -30,7 +30,7 @@ const ServiceData = [
 
 const ServicesC = () => {
   return (
-    <div className='overflow-hidden container'>
+    <div className=':overflow-hidden container'>
       <div className='container my-14 md:my-20'>
         <div className='flex animate-scroll'>
           {ServiceData.concat(ServiceData).map((data, index) => (
