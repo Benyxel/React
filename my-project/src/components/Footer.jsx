@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className=' mt-4 sm:bg-black md:bg-black  bg-black p-8'>
-      <div className=' container grid grid-cols-4 gap-8'>
+      <div className=' container grid grid-cols-4 gap-8 justify-items-center'>
         <div>
             <h1 className='text-white font-semibold '>Buy&sell</h1>
         </div>
@@ -34,20 +34,24 @@ const Footer = () => {
         </div>
 
     {/* Contact us */}
-        <div>
+        <div className='px-4'>
             <h1 className='text-white font-semibold '>
                 Contact
             </h1>
-            <div className='text-white  mt-4'>
+            <div className='text-white  mt-4 '>
                 <p>+233 554881200</p>     
                 <p>+233 540266839</p>
                 <p className='mt-4'>Email: buysellculb@gmail.com</p>
-                
-                
             </div>
         </div>
     
-
+    {/* Verified platform */}
+    <div className='px-4'>
+        <h1 className='text-white font-semibold '>
+            Verified Platforms
+        </h1>
+    </div>
+        
     </div>
     </div>
   )
