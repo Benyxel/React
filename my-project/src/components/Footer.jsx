@@ -18,6 +18,8 @@ const Footer = () => {
                 <li><a href=""></a>Services</li>
                 <li><a href=""></a>About us</li>
                 <li><a href=""></a>Contact</li>
+                <li><a href=""></a>Cart</li>
+                <li><a href=""></a>Profilet</li>
             </ul>
 
             <ul className='mt-4 font-thin '>
