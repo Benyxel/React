@@ -42,7 +42,7 @@ const Shop = () => {
   useEffect(() => {
     const filtered = products.filter((product) => {
       const matchesCategory = category.length === 0 || category.includes(product.category);
-      const matchesSubCategory = SubCategory.length === 0 || SubCategory.includes(product.name);
+      const matchesSubCategory = SubCategory.length === 0 || SubCategory.includes(product.type);
       return matchesCategory && matchesSubCategory;
     });
 
@@ -102,7 +102,7 @@ const Shop = () => {
               <input className=' w-3' type="checkbox" value={'Phone'} onChange={toggleSubCategory} />Phone
             </p>
             <p className='flex gap-2'>
-              <input className=' w-3' type="checkbox" value={'Footwear'} onChange={toggleSubCategory} />Wear
+              <input className=' w-3' type="checkbox" value={'Wear'} onChange={toggleSubCategory} />Wear
             </p>
           </div>
         </div>
@@ -130,13 +130,15 @@ const Shop = () => {
         </button>
 
         {/* map products */}
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
-          {
-            filterProducts.map((item, index) => (
+        {filterProducts.length === 0 ? (
+          <p className="text-center text-gray-500">No products found</p>
+        ) : (
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
+            {filterProducts.map((item, index) => (
               <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} />
-            ))
-          }
-        </div>
+            ))}
+          </div>
+        )}
 
       </div>
     </div>

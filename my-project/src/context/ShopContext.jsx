@@ -18,11 +18,11 @@ const ShopContextProvider = (props) => {
     const currency = '₵';
     const delivery_fee = 10;
     const products = [
-        { _id: 1, image: [p1], name: ' Mouse', price: 100, category: 'Gadget', type: 'Gadget' },
-        { _id: 2, image: [p2], name: 'Droin', price: 150, category: 'Gadget', type: 'Gadget' },
-        { _id: 3, image: [p3], name: 'Mouse', price: 200, category: 'Gadget', type: 'Gadget' },
+        { _id: 1, image: [p1], name: ' Mouse', price: 100, category: 'Gadget', type: 'Mouse' },
+        { _id: 2, image: [p2], name: 'Droin', price: 150, category: 'Gadget', type: 'Droin' },
+        { _id: 3, image: [p3], name: 'Mouse', price: 200, category: 'Gadget', type: 'Mouse' },
         { _id: 4, image: [p4], name: 'Product 4', price: 250, category: 'Gadget', type: 'Gadget' },
-        { _id: 5, image: [p5], name: 'Phone', price: 300, category: 'Gadget', type: 'Gadget', trending: true },
+        { _id: 5, image: [p5], name: 'Phone', price: 300, category: 'Gadget', type: 'Phone', trending: true },
         { _id: 6, image: [p6], name: 'Product 6', price: 300, category: 'Gadget', type: 'Gadget', trending: true },
         { _id: 7, image: [p7], name: 'Product 7', price: 300, category: 'Kitchen', type: 'Kitchen', trending: true },
         { _id: 8, image: [p8], name: 'Footwear', price: 300, category: 'Wear', type: 'Wear', trending: true },
