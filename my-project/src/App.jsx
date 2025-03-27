@@ -19,6 +19,7 @@ import Training from './pages/Quicklinks/Training'
 import AlipayPayment from './pages/Quicklinks/AlipayPayment'
 import Navbar from './components/Navbar'
 import LastestProducts from './components/LastestProducts'
+import Footer from './components/Footer'
 
 
  function App() {
@@ -46,7 +47,7 @@ import LastestProducts from './components/LastestProducts'
           <Route path = '/Training' element={<Training/>}/>
           <Route path = '/AlipayPayment' element={<AlipayPayment/>}/>
       </Routes>
-      
+      <Footer/>
     </div></main>
   )
 }
