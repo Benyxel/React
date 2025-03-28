@@ -10,7 +10,7 @@ import p8 from "../assets/products/p8.jpg"
 import p9 from "../assets/products/p9.jpg"
 import p10 from "../assets/products/p10.jpg"
 
-import Trending from "../components/TrendingP";
+
 
 export const ShopContext = createContext();
 
@@ -19,7 +19,8 @@ const ShopContextProvider = (props) => {
     const delivery_fee = 10;
 
     const [search, setSearch] = useState('');
-    const [showSearch,setShowSearch] = useState(false)
+    const [showSearch,setShowSearch] = useState(false);
+    
 
     const products = [
         { _id: 1, image: [p1], name: ' Mouse', price: 100, category: 'Gadget', type: 'Mouse' },
