@@ -19,7 +19,7 @@ const ShopContextProvider = (props) => {
     const delivery_fee = 10;
 
     const [search, setSearch] = useState('');
-    const [showSearch,setShowSearch] = useState(true)
+    const [showSearch,setShowSearch] = useState(false)
 
     const products = [
         { _id: 1, image: [p1], name: ' Mouse', price: 100, category: 'Gadget', type: 'Mouse' },
