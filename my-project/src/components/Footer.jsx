@@ -1,62 +1,57 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   return (
-    <div className=' mt-4 sm:bg-black md:bg-black  bg-black p-8'>
-      <div className=' container grid grid-cols-4 gap-8 justify-items-center'>
+    <div className='mt-4 bg-black p-8'>
+      <div className='container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center'>
+        {/* Brand Name */}
         <div>
-            <h1 className='text-white font-semibold '>Buy&sell</h1>
+          <h1 className='text-white font-semibold text-center md:text-left'>Buy&sell</h1>
         </div>
 
-    {/* Quick links */}
+        {/* Quick Links */}
         <div className='text-white'>
-            <h1 className=' font-semibold '>QuickLinks</h1>
-            <div className='flex gap-8'>
-            <ul className='mt-4 font-thin '>
-                <li><a href=""></a>Home</li>
-                <li><a href=""></a>Shop</li>
-                <li><a href=""></a>Services</li>
-                <li><a href=""></a>About us</li>
-                <li><a href=""></a>Contact</li>
-                <li><a href=""></a>Cart</li>
-                <li><a href=""></a>Profilet</li>
+          <h1 className='font-semibold text-center md:text-left'>Quick Links</h1>
+          <div className='flex flex-col sm:flex-row gap-8 justify-center md:justify-start'>
+            <ul className='mt-4 font-thin text-center sm:text-left'>
+              <li><a href="">Home</a></li>
+              <li><a href="">Shop</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">About us</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Cart</a></li>
+              <li><a href="">Profile</a></li>
             </ul>
 
-            <ul className='mt-4 font-thin '>
-                <li><a href=""></a>Buy4me</li>
-                <li><a href=""></a>Shipping</li>
-                <li><a href=""></a>TrandingProducts</li>
-                <li><a href=""></a>Training</li>
-                <li><a href=""></a>Alipay</li>
-                <li><a href=""></a>Suppliers</li>
-                <li><a href=""></a>Wholesale</li>
-                
+            <ul className='mt-4 font-thin text-center sm:text-left'>
+              <li><a href="">Buy4me</a></li>
+              <li><a href="">Shipping</a></li>
+              <li><a href="">Trending Products</a></li>
+              <li><a href="">Training</a></li>
+              <li><a href="">Alipay</a></li>
+              <li><a href="">Suppliers</a></li>
+              <li><a href="">Wholesale</a></li>
             </ul>
-            </div>
+          </div>
         </div>
 
-    {/* Contact us */}
-        <div className='px-4'>
-            <h1 className='text-white font-semibold '>
-                Contact
-            </h1>
-            <div className='text-white  mt-4 '>
-                <p>+233 554881200</p>     
-                <p>+233 540266839</p>
-                <p className='mt-4'>Email: buysellculb@gmail.com</p>
-            </div>
+        {/* Contact Us */}
+        <div className='px-4 text-center md:text-left'>
+          <h1 className='text-white font-semibold'>Contact</h1>
+          <div className='text-white mt-4'>
+            <p>+233 554881200</p>
+            <p>+233 540266839</p>
+            <p className='mt-4'>Email: buysellculb@gmail.com</p>
+          </div>
         </div>
-    
-    {/* Verified platform */}
-    <div className='px-4'>
-        <h1 className='text-white font-semibold '>
-            Verified Platforms
-        </h1>
-    </div>
-        
-    </div>
-    </div>
-  )
-}
 
-export default Footer
+        {/* Verified Platforms */}
+        <div className='px-4 text-center md:text-left'>
+          <h1 className='text-white font-semibold'>Verified Platforms</h1>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
