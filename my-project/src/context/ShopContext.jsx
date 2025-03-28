@@ -10,7 +10,7 @@ import p8 from "../assets/products/p8.jpg"
 import p9 from "../assets/products/p9.jpg"
 import p10 from "../assets/products/p10.jpg"
 
-
+import Trending from "../components/TrendingP";
 
 export const ShopContext = createContext();
 

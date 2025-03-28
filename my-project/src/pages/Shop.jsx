@@ -156,7 +156,7 @@ const Shop = () => {
             ))
           ) : (
             <p className='text-center text-gray-500 col-span-4'>
-              No products match your selected filters.
+              No products match your search or filters.
             </p>
           )}
         </div>

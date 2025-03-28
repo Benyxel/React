@@ -18,9 +18,10 @@ import PlaceOrder from './pages/PlaceOrder'
 import Training from './pages/Quicklinks/Training'
 import AlipayPayment from './pages/Quicklinks/AlipayPayment'
 import Navbar from './components/Navbar'
-import LastestProducts from './components/LastestProducts'
+
 import Footer from './components/Footer'
 import SearchBar from './components/Searchbar'
+import Products from './components/Products'
 
 
  function App() {
@@ -45,6 +46,7 @@ import SearchBar from './components/Searchbar'
           <Route path = '/Trending' element={<Trending/>}/>
           <Route path = '/Wholesale' element={<Wholesale/>}/>
           <Route path = '/Suppliers' element={<Suppliers/>}/>
+          <Route path = '/products/:productId' element={<Products/>}/>
           <Route path = '/PlaceOrder' element={<PlaceOrder/>}/>
           <Route path = '/Training' element={<Training/>}/>
           <Route path = '/AlipayPayment' element={<AlipayPayment/>}/>
