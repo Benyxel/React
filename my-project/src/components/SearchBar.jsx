@@ -1,16 +1,22 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import { IoMdSearch } from 'react-icons/io'
+import { RiCloseLargeLine } from "react-icons/ri";
+
 
 const SearchBar = () => {
 
     const{ search, setSearch, showSearch, setShowSearch} = useContext(ShopContext);
   return showSearch ? (
     
-      <div className='relative group hidden sm:block'>
-                    <input type='text' placeholder='Search' className='search-bar' />
-                    <IoMdSearch className='text-3xl group-hover:text-primary cursor-pointer text-gray-600 dark:text-gray-400 absolute top-1/2 -translate-y-1/2 right-3 duration-200' />
-                  </div>
+   <div className='border-t border-b bg-gray-50 text-center dark:bg-slate-900 '>
+        <div className='inline-flex items-center justify-center border border-gray-400 px-5 py-2 my-5 rounded-full w-3/4 sm:w-1/2 '>
+        <input value={search} onChange={(e)=>setSearch(e.target.value)} className='flex-1 outline-none bg-inherit text-md dark:text-white' type="text" placeholder='Search' 
+        />
+        <IoMdSearch  className='text-3xl group-hover:text-primary cursor-pointer text-gray-600 dark:text-gray-400'/>
+        </div>
+        <RiCloseLargeLine onClick={()=>setShowSearch(false)} className='inline  cursor-pointer ml-6 text-2xl text-gray-600  '/>
+   </div> 
     
   ) : null
 }
