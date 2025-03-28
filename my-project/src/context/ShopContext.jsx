@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, use, useState } from "react";
 import p1 from "../assets/products/pro1.jpg";
 import p2 from "../assets/products/p2.jpg"
 import p3 from "../assets/products/p3.jpg"
@@ -17,6 +17,10 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
     const currency = '₵';
     const delivery_fee = 10;
+
+    const [search, setSearch] = useState('');
+    const [showSearch,setShowSearch] = useState(true)
+
     const products = [
         { _id: 1, image: [p1], name: ' Mouse', price: 100, category: 'Gadget', type: 'Mouse' },
         { _id: 2, image: [p2], name: 'Droin', price: 150, category: 'Gadget', type: 'Droin' },
@@ -25,13 +29,14 @@ const ShopContextProvider = (props) => {
         { _id: 5, image: [p5], name: 'Phone', price: 300, category: 'Gadget', type: 'Phone', trending: true },
         { _id: 6, image: [p6], name: 'Product 6', price: 300, category: 'Gadget', type: 'Gadget', trending: true },
         { _id: 7, image: [p7], name: 'Product 7', price: 300, category: 'Kitchen', type: 'Kitchen', trending: true },
-        { _id: 8, image: [p8], name: 'Footwear', price: 300, category: 'Wear', type: 'Wear', trending: true },
+        { _id: 8, image: [p8], name: 'Footwear', price: 300, category: 'Wear', type: 'Footwear', trending: true },
         { _id: 9, image: [p9], name: 'Product 9', price: 300, category: 'Kitchen', type: 'Kitchen', trending: true },
         { _id: 10, image: [p10], name: 'Product 10', price: 300, category: 'Kitchen', type: 'Kitchen', trending: true },
     ]; // Define your products array here
 
     const value = {
-        products, currency, delivery_fee
+        products, currency, delivery_fee,
+        search,setSearch,showSearch,setShowSearch
     };
 
     return (

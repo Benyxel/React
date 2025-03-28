@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import { IoMdArrowDropdown } from "react-icons/io";
 import Title from '../components/Title';
-import ProductItem from '../components/ProductItem';
+import ProductItem from '../components/productItem';
 
 const Shop = () => {
   const { products } = useContext(ShopContext);
@@ -104,7 +104,7 @@ const Shop = () => {
               <input className='w-3' type='checkbox' value={'Phone'} onChange={toggleSubCategory} />Phone
             </p>
             <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Wear'} onChange={toggleSubCategory} />Wear
+              <input className='w-3' type='checkbox' value={'Footr'} onChange={toggleSubCategory} />Footwear
             </p>
           </div>
         </div>

@@ -20,12 +20,14 @@ import AlipayPayment from './pages/Quicklinks/AlipayPayment'
 import Navbar from './components/Navbar'
 import LastestProducts from './components/LastestProducts'
 import Footer from './components/Footer'
+import SearchBar from './components/Searchbar'
 
 
  function App() {
   return (
     <main>
       <Navbar/>
+      
     <div className='bg-white dark:bg-gray-900 dark:text-white duration-200 '>
       
       <Routes>

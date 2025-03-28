@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { IoMdSearch } from 'react-icons/io'
 import { FaShoppingCart } from 'react-icons/fa'
 import { IoMdArrowDropdown } from 'react-icons/io'
 import DarkMode from './DarkMode'
@@ -7,6 +6,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { FaUser } from 'react-icons/fa'
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import SearchBar from './Searchbar'
 
 const MenuLinks = [
   { name: 'Home', href: '/' },
@@ -97,10 +97,7 @@ export default function Navbar() {
 
           {/* navbar right */}
           <div className='flex justify-between items-center gap-3 p-3'>
-            <div className='relative group hidden sm:block'>
-              <input type='text' placeholder='Search' className='search-bar' />
-              <IoMdSearch className='text-3xl group-hover:text-primary cursor-pointer text-gray-600 dark:text-gray-400 absolute top-1/2 -translate-y-1/2 right-3 duration-200' />
-            </div>
+            <SearchBar/>
             {/* CART */}
             <div className='btn relative p-2'>
               <Link to='/Cart' className='relative group'>
