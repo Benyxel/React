@@ -10,6 +10,7 @@ const Product = () => {
  const {products,currency} =useContext(ShopContext);
  const [productData,setProductData] = useState(false)
  const [image,setImage] = useState('')
+ const [size,setSize] = useState('')
 
  const fetchProductData = async () => {
   products.forEach((item) => {
@@ -74,8 +75,8 @@ const Product = () => {
             <div className='flex flex-col gap-4 my-8'>
               <p>Select Size</p>
               <div className='flex gap-2'>
-                {productData.sizes.map((item,index)=>(
-                  <button className={`border py-2 px-4 bg-brandBlue text-white`} key={index}>{item}</button>
+              {productData.sizes.map((item,index)=>(
+                  <button onClick={()=>setSize(item)} className={`border py-2 px-4 bg-brandBlue text-white rounded hover:bg-brandYellow ${item === size ? 'bg-brandYellow': ''}`} key={index}>{item}</button>
                 ))}
               </div>
             </div>
