@@ -80,6 +80,15 @@ const Product = () => {
                 ))}
               </div>
             </div>
+
+                <button className='bg-brandGreen text-white px-8 py-3 text-sm active:bg-gray-700' >ADD TO CART</button>
+                <hr className='mt-8 sn:w-4/5' />
+                <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
+                  <p>100% Original Product.</p>
+                  <p>Fast Delivey within 24hrs. </p>
+                  <p>Easy return and exchange policy within 2 days.</p>
+
+                </div>
         </div>
       </div>
     </div>
