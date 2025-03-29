@@ -21,7 +21,7 @@ import Navbar from './components/Navbar'
 
 import Footer from './components/Footer'
 import SearchBar from './components/Searchbar'
-import Products from './components/Products'
+import Product from './components/Product'
 
 
  function App() {
@@ -46,7 +46,7 @@ import Products from './components/Products'
           <Route path = '/Trending' element={<Trending/>}/>
           <Route path = '/Wholesale' element={<Wholesale/>}/>
           <Route path = '/Suppliers' element={<Suppliers/>}/>
-          <Route path = '/products/:productId' element={<Products/>}/>
+          <Route path = '/product/:productId' element={<Product/>}/>
           <Route path = '/PlaceOrder' element={<PlaceOrder/>}/>
           <Route path = '/Training' element={<Training/>}/>
           <Route path = '/AlipayPayment' element={<AlipayPayment/>}/>
