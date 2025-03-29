@@ -21,7 +21,7 @@ import Navbar from './components/Navbar'
 
 import Footer from './components/Footer'
 import SearchBar from './components/Searchbar'
-import Products from './components/Product'
+import Products from './components/Products'
 
 
  function App() {
