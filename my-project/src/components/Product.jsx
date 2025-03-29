@@ -27,13 +27,13 @@ const Product = () => {
   return productData? (
 
 
-    <div className='border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100'>
+    <div className='container pb-4 border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100 '>
       {/* product data */}
-      <div className='flex gap-12 sm:gap-12 flex-col sm:flex-row'>
+      <div className=' flex gap-12 sm:gap-12 flex-col sm:flex-row'>
 
     {/* product images */}
-    <div className='flex-1 flex flex-col-reverse gap-3 sm:flex-row'>
-      <div className='flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[18.7%] w-full'>
+    <div className='flex-1 flex flex-col-reverse gap-3 sm:flex-row p-5 rounded-md bg-brandWhite' >
+      <div className='flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[18.7%] w-full '>
         {
           productData.image && productData.image.length > 0 ? (
             productData.image.map((item, index) => (
@@ -41,7 +41,7 @@ const Product = () => {
                 onClick={()=>setImage(item)}
                 src={item}
                 key={index}
-                className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer"
+                className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer rounded-md "
                 alt=""
               />
             ))
@@ -52,7 +52,7 @@ const Product = () => {
       </div>
 
       <div className='w-full sm:-[80%]'>
-        <img className='w-full h-auto' src={image} alt="" />
+        <img className='w-full h-auto rounded-2xl' src={image} alt="" />
       </div>
     </div>
         {/* products info */}
@@ -69,7 +69,7 @@ const Product = () => {
 
 
           <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}</p>
-          <p> {productData.description}</p>
+          <p className='mt-7'> {productData.description}</p>
           
             
 

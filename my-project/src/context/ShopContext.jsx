@@ -23,7 +23,7 @@ const ShopContextProvider = (props) => {
     
 
     const products = [
-        { _id: 1, image: [p1,p1,p3,p1], name: ' Mouse', description: 'This is mouse from china', price: 100, category: 'Gadget', type: 'Mouse' },
+        { _id: 1, image: [p1,p1,p3,p1,p1], name: ' Mouse', description: 'This is mouse from china', price: 100, category: 'Gadget', type: 'Mouse' },
         { _id: 2, image: [p2], name: 'Droin', price: 150, category: 'Gadget', type: 'Droin' },
         { _id: 3, image: [p3], name: 'Mouse', price: 200, category: 'Gadget', type: 'Mouse' },
         { _id: 4, image: [p4], name: 'Product 4', price: 250, category: 'Gadget', type: 'Gadget' },
