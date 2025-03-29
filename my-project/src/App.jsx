@@ -51,7 +51,7 @@ import Product from './components/Product'
           <Route path = '/Training' element={<Training/>}/>
           <Route path = '/AlipayPayment' element={<AlipayPayment/>}/>
       </Routes>
-      <Footer/>
+     
     </div></main>
   )
 }
