@@ -71,8 +71,14 @@ const Product = () => {
           <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}</p>
           <p className='mt-7'> {productData.description}</p>
           
-            
-
+            <div className='flex flex-col gap-4 my-8'>
+              <p>Select Size</p>
+              <div className='flex gap-2'>
+                {productData.sizes.map((item,index)=>(
+                  <button className={`border py-2 px-4 bg-brandBlue text-white`} key={index}>{item}</button>
+                ))}
+              </div>
+            </div>
         </div>
       </div>
     </div>
