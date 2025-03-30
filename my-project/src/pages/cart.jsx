@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import Title from '../components/Title';
+import { ImBin } from "react-icons/im";
 
 const cart = () => {
-  const { products, currency, cartItems } = useContext(ShopContext);
+  const { products, currency, cartItems, updateQuantity} = useContext(ShopContext);
   const [cartData, setCartData] = useState([]);
 
   useEffect(() => {
@@ -40,16 +41,31 @@ const cart = () => {
                 <div className='flex items-start gap'>
                   <img className='w-16 sm:w-20' src={productData?.image[0]} alt="" />
                   <div>
-                    <p className=' mt-2 mx-6 text-xs sm:text-lg font-medium'>{productData?.name || 'Product not found'}</p>
-                  
-                  <div className='flex items-center gap-5 mx-6 mt-2'>
-                    <p>{currency} {productData.price}</p>
-                    <p className='px-2  sm:px-3 sm:py-1 border bg-slate-50'>{item.size}</p>
+                    <p className='mt-2 mx-6 text-xs sm:text-lg font-medium'>{productData?.name || 'Product not found'}</p>
+                    <div className='flex items-center gap-5 mx-6 mt-2'>
+                      <p>{currency} {productData?.price}</p>
+                      <p className='px-2 sm:px-3 sm:py-1 border bg-slate-50'>{item.size}</p>
                     </div>
                   </div>
                 </div>
 
-                
+                <input
+                  className='border max-w-10 sm:max-w-20 px-1 sm:px-2 py'
+                  type="number"
+                  min={1}
+                  defaultValue={item.quantity}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (value === '' || value === '0') {
+                      return;
+                    }
+                    updateQuantity(item._id, item.size, Number(value));
+                  }}
+                />
+                <ImBin
+                  onClick={() => updateQuantity(item._id, item.size, 0)}
+                  className='w-4 mr-4 text-2xl sm:w-5 cursor-pointer hover:text-primary'
+                />
               </div>
             );
           })
