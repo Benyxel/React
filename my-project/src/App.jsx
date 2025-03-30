@@ -18,7 +18,7 @@ import PlaceOrder from './pages/PlaceOrder'
 import Training from './pages/Quicklinks/Training'
 import AlipayPayment from './pages/Quicklinks/AlipayPayment'
 import Navbar from './components/Navbar'
-
+import { ToastContainer, toast } from 'react-toastify';
 import Footer from './components/Footer'
 import SearchBar from './components/Searchbar'
 import Product from './components/Product'
@@ -27,6 +27,7 @@ import Product from './components/Product'
  function App() {
   return (
     <main>
+      <ToastContainer />
       <Navbar/>
       <SearchBar/>
     <div className='bg-white dark:bg-gray-900 dark:text-white duration-200 '>

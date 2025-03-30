@@ -36,7 +36,7 @@ const DropdownUser = [
 
 export default function Navbar() {
   const [visible, setVisible] = useState(false)
-  const {setShowSearch} = useContext(ShopContext)
+  const {setShowSearch, getCartCount} = useContext(ShopContext)
   return (
     <div className='bg-white shadow-md dark:bg-gray-900 dark:text-white duration-200 relative z-40'>
       <div className='py-4'>
@@ -109,7 +109,7 @@ export default function Navbar() {
               <Link to='/Cart' className='relative group'>
                 <FaShoppingCart className='text-2xl text-gray-600 dark:text-gray-400 hover:text-brandGreen' />
                 <div className='w-4 h-4 bg-red-500 text-white rounded-full absolute -top-1 right-4 transform translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-xs'>
-                  <span>4</span>
+                  <span>{getCartCount()}</span>
                 </div>
               </Link>
             </div>

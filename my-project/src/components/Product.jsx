@@ -2,12 +2,13 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 import { FaStar } from "react-icons/fa6";
+import RelatedProducts from './RelatedProducts';
 
 
 const Product = () => {
 
   const {productId} = useParams();
- const {products,currency} =useContext(ShopContext);
+ const {products,currency,addToCart} =useContext(ShopContext);
  const [productData,setProductData] = useState(false)
  const [image,setImage] = useState('')
  const [size,setSize] = useState('')
@@ -73,15 +74,15 @@ const Product = () => {
           <p className='mt-7'> {productData.description}</p>
           
             <div className='flex flex-col gap-4 my-8'>
-              <p>Select Size</p>
+              <p>Select Size/ Color</p>
               <div className='flex gap-2'>
               {productData.sizes.map((item,index)=>(
                   <button onClick={()=>setSize(item)} className={`border py-2 px-4 bg-brandBlue text-white rounded hover:bg-brandYellow ${item === size ? 'bg-brandYellow': ''}`} key={index}>{item}</button>
                 ))}
               </div>
             </div>
-
-                <button className='bg-brandGreen text-white px-8 py-3 text-sm active:bg-gray-700' >ADD TO CART</button>
+                  {/* cart-btn */}
+                <button onClick={()=>addToCart(productData._id,size)} className='bg-brandGreen text-white px-8 py-3 text-sm active:bg-gray-700' >ADD TO CART</button>
                 <hr className='mt-8 sn:w-4/5' />
                 <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
                   <p>100% Original Product.</p>
@@ -91,6 +92,21 @@ const Product = () => {
                 </div>
         </div>
       </div>
+
+      {/* description AND review section*/}
+      <div className='mt-20'>
+          <div className='flex'>
+            <b className='border px-5 py-3 text-sm' >Description</b>
+            <p className='border px-5 py-3 text-sm'>Reviews(65)</p>
+          </div>
+          <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
+                <p>jhvjxhvjvxhjxvhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+          </div>
+      </div>
+
+      {/* RELATED PRODUCTS */}
+      <RelatedProducts category={productData.category} subCategory={productData.subCategory}/>
+
     </div>
   ): <div className='opacity-0'></div>
 }
