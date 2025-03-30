@@ -22,29 +22,27 @@ const ShopContextProvider = (props) => {
     const [search, setSearch] = useState('');
     const [showSearch,setShowSearch] = useState(false);
     
-    const addToCart = async (itemId,size)=> {
-
-        if(!size){
-            toast.error('Select Product Size/Color')
+    const addToCart = async (itemId, size) => {
+        if (!size) {
+            toast.error('Select Product Size/Color');
+            return; // Exit the function if no size is selected
         }
 
-        let cartData= structuredClone(cartItems);
+        let cartData = structuredClone(cartItems);
 
-        if (cartData[itemId]){
-            if(cartData[itemId][size]){
-                cartData[itemId][size] +=1;
-            }
-            else {
+        if (cartData[itemId]) {
+            if (cartData[itemId][size]) {
+                cartData[itemId][size] += 1;
+            } else {
                 cartData[itemId][size] = 1;
             }
-        }
-        else{
-            cartData[itemId]={};
-            cartData[itemId][size]=1;
+        } else {
+            cartData[itemId] = {};
+            cartData[itemId][size] = 1;
         }
 
         setCartItems(cartData);
-    }
+    };
 
     const products = [
         { _id: 1, image: [p1,p1,p3,p1], name: ' Mouse',sizes: ['WHITE','BLACK','BLUE'], description: 'This is mouse from china', price: 100, category: 'Gadget', type: 'Mouse' },
