@@ -59,19 +59,19 @@ const ShopContextProvider = (props) => {
 
 
    const getCartCount = () =>{
-    let totalCount =0;
+    let total =0;
     for(const items in cartItems){
         for(const item in cartItems[items]){
             try {
                 if (cartItems[items][item] > 0){
-                    totalCount += cartItems[items][item];
+                    total += cartItems[items][item];
                 }
             } catch (error){
 
             }
         }
     }
-    return totalCount;
+    return total;
    }
 
     const updateQuantity = async(itemId,size,quantity)=>{
@@ -80,12 +80,28 @@ const ShopContextProvider = (props) => {
         setCartItems(cartData);
     }
 
+    const getCartAmount =  () =>{
+        let totalAmount = 0;
+        for (const items in cartItems){
+            let iteminfo = products.find((product)=>product._id === Number( items));
+            for(const item in cartItems[items]){
+                try{
+                    if(cartItems[items][item] > 0 ){
+                        totalAmount += iteminfo.price * cartItems[items][item]
+                    }
+                } catch(error){
+
+                }
+            }
+        }
+        return totalAmount;
+    } 
 
     const value = {
         products, currency, delivery_fee,
         search,setSearch,showSearch,setShowSearch,
         cartItems,addToCart,getCartCount,
-        updateQuantity
+        updateQuantity, getCartAmount
     };
 
     return (
