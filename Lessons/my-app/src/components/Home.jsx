@@ -11,7 +11,7 @@ const home = () => {
   return (
     <div>
       <h1>Do I feel like Going out to night?</h1>
-        <button onClick={mindset}> { isGoing ? "Yes" : "No" } </button>
+        <button onClick={mindset}> { isGoing ? "Yes" : "Nooo" } </button>
     </div>
   )
 }
