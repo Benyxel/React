@@ -1,18 +1,19 @@
 import React from 'react'
-import { useState } from 'react'
-import Card from './components/Card'
-import Todo from './components/Todo'
-import './App.css'
+import "./App.css"
 
-function App() {
-  
 
+const App = () => {
   return (
-    <>
-      <Todo />
-      
-    </>
+    <div className='app'>
+      <header className='app_header'>Header Section</header>
+      <main className='app_main'>
+        <section className='task_colume'>Section 1</section>
+        <section className='task_colume'>Section 2</section>
+        <section className='task_colume'>Section 3</section>
+      </main>
+    </div>
   )
 }
 
 export default App
+
