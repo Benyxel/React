@@ -1,5 +1,7 @@
 
 import React from 'react'
+import './TaskForm.css'
+
 
 const TaskForm = () => {
   return (
@@ -13,6 +15,14 @@ const TaskForm = () => {
             <button className='tag'> Javascripts</button>
             <button className='tag'> React</button>
             <button className='tag'> Python</button>
+
+            <select className='task_status'> 
+              <option value='todo' key=' '>To do</option>
+              <option value='doing' key=''>Doing</option>
+              <option value='done' key=''>Done </option>
+            </select>
+
+            <button type='submit' className='task_submit'> + Add Task</button>
           </div>
         </form>
       </header>
