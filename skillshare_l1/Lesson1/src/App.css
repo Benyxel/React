@@ -5,7 +5,8 @@
 
 .app_main{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 50px;
   padding: 40px 5%;
 }
 
