@@ -1,5 +1,5 @@
 import React from 'react'
-import './TaskColumn.css'
+import './css/TaskColumn.css'
 import TaskCard from './TaskCard'
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import Tag from './Tag'
 import delicon from '../assets/delete.png'
-import './TaskCard.css'
+import './css/TaskCard.css'
 
 
 

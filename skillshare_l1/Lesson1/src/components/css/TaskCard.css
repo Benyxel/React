@@ -7,6 +7,11 @@
     margin: 15px 0;
 }
 
+.task_card_btn_l{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .task_text{
     font-size: 18px;
     font-weight: 600;
@@ -14,11 +19,12 @@
 }
 
 .task_del{
-    width: 35px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
@@ -29,4 +35,9 @@
 
 .del_icon{
     width: 20px;
+    opacity: 50%;
+    transition: all 0.3s ease-in-out;
+}
+.task_del:hover .del_icon{
+    opacity: 80%;
 }
