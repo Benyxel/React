@@ -20,7 +20,7 @@
 }
 
 .task_del{
-    width: 40px;
+    min-width: 40px;
     height: 40px;
     border-radius: 100%;
     display: flex;
@@ -31,7 +31,7 @@
 }
 
 .task_del:hover{
-    background-color: #ebebeb;
+    background-color: #ef8a8a;
     
 }
 
