@@ -6,5 +6,10 @@
 .task_column_h{
     display: flex;
     align-items: center;
+    justify-content: start;
     
+}
+
+.task_column{
+    width: 400px;
 }

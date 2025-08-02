@@ -5,15 +5,14 @@ import './css/TaskCard.css'
 
 
 
-const TaskCard = () => {
+const TaskCard = ({title, tags}) => {
   return (
       <article className='task_card'>
-          <p className='task_text'>This is a sample text</p>
+          <p className='task_text'>{title}</p>
 
           <div className='task_card_btn_l'>
               <div className='task_card_tags'>
-                  <Tag tagName='HTLM' />
-                  <Tag tagName='CSS' />
+                 {tags.map((tag, index) => <Tag key={index} tagName={tag} selected/>)}
               </div>
               <div className='task_del'>
                   <img src={delicon} className='del_icon' alt=''/>

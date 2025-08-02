@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./css/TaskForm.css";
 import Tag from "./Tag";
 
-const TaskForm = () => {
+const TaskForm = ({setTasks}) => {
   const [taskData, setTaskData] = useState({
     task: "",
     status: "todo",
@@ -17,7 +17,15 @@ const TaskForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(taskData);
+    setTasks(prev => {
+      return [...prev, taskData]
+    })
+
+    setTaskData({
+    task: "",
+    status: "todo",
+    tags:[],
+  })
   }
   
   const selectTag = (tag) => {
@@ -33,7 +41,14 @@ const TaskForm = () => {
       })
     }
   }
-    console.log(taskData.tags)
+
+  const checkTags = (tag) => {
+    return taskData.tags.some(item => item === tag )
+  }
+  console.log(taskData.tags)
+  
+  
+
   return (
     <div>
       <header className="app_header">
@@ -45,14 +60,14 @@ const TaskForm = () => {
             placeholder="Enter your task"
             onChange={handleChanges}
           />
-          <h1>{ [taskData.task,taskData.status, taskData.tags] }</h1>
+          
           <div className="task_f_btn_l">
             <div>
-              <Tag tagName="HTML" selectTags ={selectTag} />
-              <Tag tagName="CSS" selectTags ={selectTag} />
-              <Tag tagName="JavaScript" selectTags ={selectTag}/>
-              <Tag tagName="Python" selectTags ={selectTag} />
-              <Tag tagName="Node.js" selectTags ={selectTag} />h1
+              <Tag tagName="HTML" selectTags ={selectTag} selected = {checkTags("HTML")}/>
+              <Tag tagName="CSS" selectTags ={selectTag} selected = {checkTags("CSS")}/>
+              <Tag tagName="JavaScript" selectTags ={selectTag} selected = {checkTags ("JavaScript")}/>
+              <Tag tagName="Python" selectTags ={selectTag} selected = {checkTags("Python")}/>
+              <Tag tagName="Node.js" selectTags ={selectTag} selected = {checkTags ("Node.js")}/>
             </div>
 
             <div>
@@ -62,7 +77,7 @@ const TaskForm = () => {
                 name="status"
               >
                 <option className="opt" value="todo" key="todo">
-                  To do
+                  Todo
                 </option>
                 <option className="opt" value="doing" key="doing">
                   Doing

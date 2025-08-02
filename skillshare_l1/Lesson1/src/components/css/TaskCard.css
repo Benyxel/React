@@ -19,8 +19,8 @@
 }
 
 .task_del{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     display: flex;
     align-items: center;
@@ -31,9 +31,11 @@
 
 .task_del:hover{
     background-color: #ebebeb;
+    
 }
 
 .del_icon{
+    
     width: 20px;
     opacity: 50%;
     transition: all 0.3s ease-in-out;
