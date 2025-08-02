@@ -5,7 +5,7 @@ import './css/TaskCard.css'
 
 
 
-const TaskCard = ({title, tags}) => {
+const TaskCard = ({title, tags, handleDelete, index}) => {
   return (
       <article className='task_card'>
           <p className='task_text'>{title}</p>
@@ -14,7 +14,7 @@ const TaskCard = ({title, tags}) => {
               <div className='task_card_tags'>
                  {tags.map((tag, index) => <Tag key={index} tagName={tag} selected/>)}
               </div>
-              <div className='task_del'>
+              <div className='task_del' onClick={ () => handleDelete(index)}>
                   <img src={delicon} className='del_icon' alt=''/>
               </div>
           </div>

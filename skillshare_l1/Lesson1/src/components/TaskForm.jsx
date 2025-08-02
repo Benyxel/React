@@ -6,7 +6,7 @@ const TaskForm = ({setTasks}) => {
   const [taskData, setTaskData] = useState({
     task: "",
     status: "todo",
-    tags:[],
+    tags:[]
   });
   const handleChanges = (e) => {
     const {name, value} = e.target
@@ -19,13 +19,17 @@ const TaskForm = ({setTasks}) => {
     e.preventDefault();
     setTasks(prev => {
       return [...prev, taskData]
-    })
+    });
 
     setTaskData({
     task: "",
     status: "todo",
-    tags:[],
+    tags:[]
   })
+
+
+
+   
   }
   
   const selectTag = (tag) => {
@@ -56,6 +60,7 @@ const TaskForm = ({setTasks}) => {
           <input
             type="text"
             name="task"
+            value={taskData.task}
             className="task_input"
             placeholder="Enter your task"
             onChange={handleChanges}
@@ -73,6 +78,7 @@ const TaskForm = ({setTasks}) => {
             <div>
               <select
                 className="task_status"
+                value={taskData.status}
                 onChange={handleChanges}
                 name="status"
               >

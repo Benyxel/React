@@ -5,6 +5,7 @@
     border-radius: 10px;
     padding: 15px;
     margin: 15px 0;
+    transition: all 3s ease-in-out;
 }
 
 .task_card_btn_l{
