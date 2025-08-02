@@ -5,7 +5,10 @@ import './css/TaskCard.css'
 
 
 
-const TaskCard = ({title, tags, handleDelete, index}) => {
+const TaskCard = ({ title, tags, handleDelete, index }) => {
+    
+
+
   return (
       <article className='task_card'>
           <p className='task_text'>{title}</p>
