@@ -2,9 +2,9 @@ import React from 'react'
 import './css/Tag.css'
 
 
-const Tag = (props) => {
+const Tag = ({tagName, selectTags}) => {
   return (
-    <button className='tag'> {props.tagName} </button>
+    <button type='button' className='tag' onClick={() => selectTags(tagName)}> {tagName} </button>
   )
 }
 
