@@ -26,6 +26,10 @@ const App = () => {
     setTasks(newTasks)
   }
 
+  const onDrop = (status, position) => {
+    
+  }
+
   return (
     <div className='app'>
       <TaskForm setTasks={ setTasks} />
@@ -36,6 +40,7 @@ const App = () => {
           status="todo"
           handleDelete={handleDelete}
           setActiveCard={setActiveCard}
+          onDrop={onDrop}
         />
         <TaskColumn title='Doing'
           icon={Doingicon}
@@ -43,6 +48,7 @@ const App = () => {
           status="doing"
           handleDelete={handleDelete}
           setActiveCard={setActiveCard}
+          onDrop={onDrop}
         />
         <TaskColumn title='Done'
           icon={Doneicon}
@@ -50,6 +56,7 @@ const App = () => {
           status="done"
           handleDelete={handleDelete}
           setActiveCard={setActiveCard}
+          onDrop={onDrop}
         />
 
       </main>

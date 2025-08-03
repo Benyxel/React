@@ -12,8 +12,9 @@ const TaskCard = ({ title, tags, handleDelete, index, setActiveCard}) => {
   return (
       <article
           className='task_card'
-          draggable onDragStart={() => setActiveCard(index)}
-          onDragEnd={() => setActiveCard(nul)}>
+          draggable
+          onDragStart={() => setActiveCard(index)}
+          onDragEnd={() => setActiveCard(null)}>
           
           <p className='task_text'>{title}</p>
 
