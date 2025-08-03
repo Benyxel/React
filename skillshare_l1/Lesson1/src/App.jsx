@@ -13,6 +13,8 @@ const oldTasks = localStorage.getItem("tasks");
 
 const App = () => {
   const [tasks, setTasks] = useState(JSON.parse(oldTasks) || []);
+  const [activeCard, setActiveCard] = useState(null)
+
   console.log("task", tasks)
 
   useEffect(() => {
@@ -28,11 +30,30 @@ const App = () => {
     <div className='app'>
       <TaskForm setTasks={ setTasks} />
       <main className='app_main'>
-        <TaskColumn title='Todo' icon={Todoicon} tasks={tasks} status = "todo" handleDelete= {handleDelete} />
-        <TaskColumn title='Doing' icon ={Doingicon} tasks={tasks} status = "doing" handleDelete= {handleDelete} />
-        <TaskColumn title='Done' icon ={Doneicon} tasks={tasks} status = "done" handleDelete= {handleDelete} />
+        <TaskColumn title='Todo'
+          icon={Todoicon}
+          tasks={tasks}
+          status="todo"
+          handleDelete={handleDelete}
+          setActiveCard={setActiveCard}
+        />
+        <TaskColumn title='Doing'
+          icon={Doingicon}
+          tasks={tasks}
+          status="doing"
+          handleDelete={handleDelete}
+          setActiveCard={setActiveCard}
+        />
+        <TaskColumn title='Done'
+          icon={Doneicon}
+          tasks={tasks}
+          status="done"
+          handleDelete={handleDelete}
+          setActiveCard={setActiveCard}
+        />
 
       </main>
+      <h1>Activa Card {activeCard}</h1>
     </div>
   )
 }

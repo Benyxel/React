@@ -5,12 +5,16 @@ import './css/TaskCard.css'
 
 
 
-const TaskCard = ({ title, tags, handleDelete, index }) => {
+const TaskCard = ({ title, tags, handleDelete, index, setActiveCard}) => {
     
 
 
   return (
-      <article className='task_card' draggable>
+      <article
+          className='task_card'
+          draggable onDragStart={() => setActiveCard(index)}
+          onDragEnd={() => setActiveCard(nul)}>
+          
           <p className='task_text'>{title}</p>
 
           <div className='task_card_btn_l'>
