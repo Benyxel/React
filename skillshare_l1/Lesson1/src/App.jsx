@@ -27,7 +27,18 @@ const App = () => {
   }
 
   const onDrop = (status, position) => {
-    
+
+   if (activeCard == null || activeCard === undefined)
+     return;
+    const taskToMove = tasks[activeCard];
+   const updatedTasks = tasks.filter((task, index) => index !== activeCard)
+    updatedTasks.splice(position, 0, {
+      ...taskToMove,
+      status:status
+    })
+
+    setTasks(updatedTasks)
+ 
   }
 
   return (
@@ -60,7 +71,7 @@ const App = () => {
         />
 
       </main>
-      <h1>Activa Card {activeCard}</h1>
+     
     </div>
   )
 }
