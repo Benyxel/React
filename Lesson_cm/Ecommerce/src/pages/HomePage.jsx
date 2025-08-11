@@ -1,4 +1,9 @@
 import React from 'react'
+import "./header.css"
+import "./HomePage.css"
+
+
+
 
 const HomePage = () => {
   return (
