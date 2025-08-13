@@ -6,7 +6,7 @@ const MovieList = () => {
   return (
       <section className='movie_list'>
           <header className='movie_list_header'>
-              <h2 className='movie_list_heading'>Popular <img className='Link_emoji' src={Fire} alt='' /> </h2>
+              <h2 className='movie_list_heading'>Popular <img className='link_emoji' src={Fire} alt='' /> </h2>
               
               <div className='movie_list_fs'>
                   <ul className='movie_filter'>

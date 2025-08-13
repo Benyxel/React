@@ -1,0 +1,16 @@
+.movie_list_header{
+    padding:  10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 5px;
+
+}
+
+.movie_list_heading {
+    display: flex;
+    align-items: center;
+    
+    font-size: 26px;
+    color: #ffe400;
+}
