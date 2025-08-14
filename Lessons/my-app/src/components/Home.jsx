@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 const home = () => {
-    const [isGoing, setIsGoing] = useState(false)
+    const [isGoing, setIsGoing] = useState()
 
     function mindset () {
         setIsGoing (prev => !prev)
