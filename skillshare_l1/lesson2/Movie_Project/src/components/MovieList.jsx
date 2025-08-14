@@ -1,6 +1,7 @@
 import React from 'react'
 import "../style/MovieList.css"
 import Fire from "../assets/fire.png"
+import MovieCard from './MovieCard'
 
 const MovieList = () => {
 return (
@@ -10,7 +11,7 @@ return (
         
         <div className='movie_list_fs align_center'>
             <ul className='movie_filter align_center'>
-                <li className='movie_filter_item'>8+ Star</li>
+                <li className='movie_filter_item active'>8+ Star</li>
                 <li className='movie_filter_item'>7+ Star</li>
                 <li className='movie_filter_item'>6+ Star</li>
 
@@ -27,7 +28,12 @@ return (
                 <option value='' key=''>Decending </option>
             </select>
         </div>
-    </header>    
+        </header>    
+        
+        <div className='movie_cards'>
+            <MovieCard />
+
+        </div>
 
 </section>
 )

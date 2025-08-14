@@ -20,6 +20,10 @@
     padding: 5px 10px;
     cursor: pointer;
 }
+.movie_filter_item.active{
+    border-bottom:  1px solid #e6e6e6;
+    font-weight: 500;
+}
 
 .movie_sorting{
     border: none;
@@ -27,4 +31,14 @@
     border-radius: 5px;
     font-size: 16px;
     font-weight: 500;
+    font-family: inherit;
+    height: 30px;
+    padding: 0 5px;
+    margin: 0 10px;
+}
+
+.movie_cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
