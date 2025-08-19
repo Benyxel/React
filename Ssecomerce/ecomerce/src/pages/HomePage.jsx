@@ -4,6 +4,8 @@ import { products } from "../../../sourcecode/data/products";
 import "./HomePage.css";
 
 const HomePage = () => {
+
+  fetch('http://localhost:3000/api/products')
   return (
     <>
       <title>Ecommerce</title>
