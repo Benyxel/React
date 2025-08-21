@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 const HomePage = () => {
     
   const [products, setProduct] = useState([])
+  const [cart, setCart] = useState([])
 
   useEffect(() => {
     axios.get('http://localhost:3000/api/products')
@@ -14,6 +15,12 @@ const HomePage = () => {
       setProduct(response.data) 
     })
 
+
+    axios.get('http://localhost:3000/api/cart-items')
+      .then((response) => {
+        setCart(response.data)
+      })
+    
   },[])
 
   
@@ -22,7 +29,7 @@ const HomePage = () => {
     <>
       <title>Ecommerce</title>
 
-      <Header title="Order"/>
+      <Header title="Order" cart = {cart} />
 
       <div className="home-page">
         <div className="products-grid">
