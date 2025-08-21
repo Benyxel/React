@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logincard{
+    display: flex;
+    width: 800px;
+    height: 400px;
+    background-color: white;
+    border-radius: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    color: black;
+    
+
+}
+
+.leftside{
+    width: 250px;
+    padding: 50px;
+    background: linear-gradient( rgb(14, 42, 102), rgb(15, 73, 127) );
+    border-radius: 15px 30px 30px 15px;
+    text-align: center;
+}
+
+
+
+.left-c{
+    color: white;
+   margin-bottom: 50px ;
+   
+}
+
+.centerdiv{
+    background-color: white;
+    width: 40px;
+    margin-left: -15px;
+    margin-top: 50px;
+    height: 300px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.right-side{
+    width: 350px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+text-align: center;
+}
+
+.right-side h1{
+    font-size: 20px;
+}
+
+.btndiv{
+    display: flex;
+    gap: 20px;
+    align-items: right;
+}

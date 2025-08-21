@@ -1,0 +1,16 @@
+.inputd{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.inputd input{
+    padding: 5px;
+    background-color: white;
+    border: none;
+    border-bottom: solid 1px #2b5ce2;
+    border-top: solid 1px #2b5ce2;
+}

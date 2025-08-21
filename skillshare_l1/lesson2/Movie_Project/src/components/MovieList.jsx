@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../style/MovieList.css"
 import Fire from "../assets/fire.png"
 import MovieCard from './MovieCard'
 
 const MovieList = () => {
+    const [movies, setMovies] = useState([])
 
     useEffect(() => {
     fetchMovies()
@@ -14,7 +15,7 @@ const MovieList = () => {
         const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=400c4125f742cd7c391ae48539f41acd")
     
         const data = await response.json()
-        console.log(data)
+        setMovies(data.results)
     }
 
 return (
@@ -44,7 +45,11 @@ return (
         </header>    
         
         <div className='movie_cards'>
-            <MovieCard />
+            {
+                movies.map(movie => <MovieCard key={movie.id} movie={ movie} />)
+                    
+                
+            }
 
         </div>
 
