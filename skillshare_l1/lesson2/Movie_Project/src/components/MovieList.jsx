@@ -5,6 +5,8 @@ import MovieCard from './MovieCard'
 
 const MovieList = () => {
     const [movies, setMovies] = useState([])
+    const [filterMovies, setFilterMovies] = useState([])
+    const [rating, setRating] = useState(0)
 
     useEffect(() => {
     fetchMovies()
@@ -16,6 +18,20 @@ const MovieList = () => {
     
         const data = await response.json()
         setMovies(data.results)
+        setFilterMovies(data.results)
+    }
+
+    const handFilter = rate => {
+        
+        if (rate === rating) {
+            setRating(0)
+            setFilterMovies(movies)
+        } else {
+            setRating(rate)
+        
+        const filtered = movies.filter(movie => movie.vote_average >= rate)
+        setFilterMovies(filtered)
+        }
     }
 
 return (
@@ -25,9 +41,9 @@ return (
         
         <div className='movie_list_fs align_center'>
             <ul className='movie_filter align_center'>
-                <li className='movie_filter_item active'>8+ Star</li>
-                <li className='movie_filter_item'>7+ Star</li>
-                <li className='movie_filter_item'>6+ Star</li>
+                <li className='movie_filter_item active' onClick={()=> handFilter(8)}>8+ Star</li>
+                <li className='movie_filter_item' onClick={()=> handFilter(7)}>7+ Star</li>
+                <li className='movie_filter_item' onClick={()=> handFilter(6)}>6+ Star</li>
 
             </ul>
 
@@ -46,7 +62,7 @@ return (
         
         <div className='movie_cards'>
             {
-                movies.map(movie => <MovieCard key={movie.id} movie={ movie} />)
+                filterMovies.map(movie => <MovieCard key={movie.id} movie={ movie} />)
                     
                 
             }
