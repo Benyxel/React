@@ -17,7 +17,7 @@ const MovieCard = ({movie}) => {
         </div>
 
     </a>
-  )
+)
 }
 
 export default MovieCard

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "../style/MovieList.css"
 import Fire from "../assets/fire.png"
 import MovieCard from './MovieCard'
+import Rating from './Rating'
 
 const MovieList = () => {
     const [movies, setMovies] = useState([])
@@ -21,7 +22,7 @@ const MovieList = () => {
         setFilterMovies(data.results)
     }
 
-    const handFilter = rate => {
+    const handleFilter = rate => {
         
         if (rate === rating) {
             setRating(0)
@@ -40,12 +41,7 @@ return (
         <h2 className='movie_list_heading align_center'>Popular <img className='link_emoji' src={Fire} alt='' /> </h2>
         
         <div className='movie_list_fs align_center'>
-            <ul className='movie_filter align_center'>
-                <li className='movie_filter_item active' onClick={()=> handFilter(8)}>8+ Star</li>
-                <li className='movie_filter_item' onClick={()=> handFilter(7)}>7+ Star</li>
-                <li className='movie_filter_item' onClick={()=> handFilter(6)}>6+ Star</li>
-
-            </ul>
+                <Rating rating={rating} handleFilter={handleFilter} rattings={[8,7,6] } />
 
             <select name='' id='' className='movie_sorting'> 
                 <option value='' key=''>SortBy </option>
