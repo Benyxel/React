@@ -8,6 +8,7 @@ import dayjs from "dayjs";
 
 const CheckoutPage = ({ cart }) => {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
+  const [paymentSummary, setPaymentSummary] = useState(null);
 
   useEffect(() => {
     axios
@@ -15,6 +16,11 @@ const CheckoutPage = ({ cart }) => {
       .then((response) => {
         return setDeliveryOptions(response.data);
       });
+    
+    axios.get('/api/payment-summary')
+      .then((response) => {
+        setPaymentSummary(response.data)
+    })
   }, []);
 
   return (
