@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 import ProductsGrid from "./components/ProductsGrid";
 
-const HomePage = ({ cart }) => {
+const HomePage = ({ cart , loadCart}) => {
   const [products, setProduct] = useState([]);
 
   useEffect( () => {
@@ -25,7 +25,7 @@ const HomePage = ({ cart }) => {
       <Header title="Order" cart={cart} />
 
       <div className="home-page">
-       <ProductsGrid products={products}/>
+        <ProductsGrid products={products} loadCart={ loadCart} />
       </div>
     </>
   );
