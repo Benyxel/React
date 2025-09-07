@@ -21,11 +21,6 @@ const CheckoutPage = ({ cart }) => {
     }
    getCheckoutData()
       
-    
-    
-
-    
-    
 
   }, []);
 
