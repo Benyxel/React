@@ -4,8 +4,15 @@ import axios from 'axios';
 import { useState } from 'react'
 
 const Product = ({product, loadCart}) => {
-    const [quantity, setQuantity] = useState(1)
-
+  const [quantity, setQuantity] = useState(1)
+  
+    const addToCart = async () => {
+       await axios.post('/api/cart-items', {
+                    productId: product.id,
+                    quantity
+                  })
+                  await loadCart()
+    }
   return (
     <div  className="product-container">
                 <div className="product-image-container">
@@ -60,13 +67,7 @@ const Product = ({product, loadCart}) => {
                   Added
                 </div>
 
-                <button className="add-to-cart-button button-primary" onClick={async() => {
-                 await axios.post('/api/cart-items', {
-                    productId: product.id,
-                    quantity
-                  })
-                  await loadCart()
-                }}>
+                <button className="add-to-cart-button button-primary" onClick={addToCart()}>
                   Add to Cart
                 </button>
               </div>
