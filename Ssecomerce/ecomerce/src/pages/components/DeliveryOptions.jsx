@@ -3,7 +3,7 @@ import { formatMoney } from "../components/utils/money";
 import dayjs from "dayjs";
 import axios from 'axios';
 
-const DeliveryOptions = ({deliveryOptions, cartItem}) => {
+const DeliveryOptions = ({deliveryOptions, cartItem, loadCart}) => {
   return (
     <div className="delivery-options">
                         <div className="delivery-options-title">
@@ -22,7 +22,8 @@ const DeliveryOptions = ({deliveryOptions, cartItem}) => {
                           await axios.put(`/api/cart-items/${cartItem.productId}`, {
                               deliveryOptionId: deliveryOption.id
                               
-                            })
+                          })
+                            await loadCart()
                           }
                           
                           return (
