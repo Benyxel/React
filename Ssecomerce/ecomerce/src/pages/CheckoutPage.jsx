@@ -28,7 +28,7 @@ const CheckoutPage = ({ cart, loadCart }) => {
     <>
       <title>Checkout</title>
 
-      <Header title="Checkout" />
+      <Header title="Orders" />
 
       <div className="checkout-page">
         <div className="page-title">Review your order</div>
@@ -36,7 +36,7 @@ const CheckoutPage = ({ cart, loadCart }) => {
         <div className="checkout-grid">
          <OrderSummary cart={cart} deliveryOptions={deliveryOptions} loadCart={loadCart}/>
 
-          <PaymentSummary paymentSummary={ paymentSummary} />
+          <PaymentSummary paymentSummary={paymentSummary} loadCart={ loadCart} />
         </div>
       </div>
     </>

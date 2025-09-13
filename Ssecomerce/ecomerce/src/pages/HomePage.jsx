@@ -22,7 +22,7 @@ const HomePage = ({ cart , loadCart}) => {
     <>
       <title>Ecommerce</title>
 
-      <Header title="Order" cart={cart} />
+      <Header title="Orders" cart={cart} />
 
       <div className="home-page">
         <ProductsGrid products={products} loadCart={ loadCart} />
