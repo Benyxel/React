@@ -19,12 +19,12 @@ const DeliveryOptions = ({deliveryOptions, cartItem, loadCart}) => {
                               : "Free Shipping";
                           
                           const updateDeliveryOption = async () => {
-                          await axios.put(`/api/cart-items/${cartItem.productId}`, {
+                            await axios.put(`/api/cart-items/${cartItem.productId}`, {
                               deliveryOptionId: deliveryOption.id
                               
-                          })
-                            await loadCart()
-                          }
+                            })
+                            await loadCart();
+                          };
                           
                           return (
                             <div
@@ -38,6 +38,7 @@ const DeliveryOptions = ({deliveryOptions, cartItem, loadCart}) => {
                                   deliveryOption.id ===
                                   cartItem.deliveryOptionId
                                 }
+                                onChange={()=>{}}
                                 className="delivery-option-input"
                                 name={`delivery-option-${cartItem.productId}`}
                               />

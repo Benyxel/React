@@ -52,7 +52,7 @@ const OrderSummary = ({cart, deliveryOptions, loadCart}) => {
                         </div>
                       </div>
 
-                      <DeliveryOptions deliveryOptions={deliveryOptions} cartItem={cartItem} loadCart={ loadCart}/>
+                      <DeliveryOptions deliveryOptions={deliveryOptions} cartItem={cartItem} loadCart={loadCart}/>
                     </div>
                   </div>
                 );
